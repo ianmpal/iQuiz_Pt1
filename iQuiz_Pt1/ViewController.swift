@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "iQuiz"
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -52,6 +53,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         cell.textLabel?.text = quizName
         cell.imageView!.image = UIImage(named: "nyan_cat")
         cell.detailTextLabel?.text = quizSubHeading
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         return cell
     }
     
