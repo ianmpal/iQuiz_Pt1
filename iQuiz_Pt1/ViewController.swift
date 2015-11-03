@@ -40,7 +40,6 @@ class ViewController: UIViewController, UITableViewDataSource {
         let alertController = UIAlertController(title: "Settings Go Here", message:
             "Subtitle here", preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler: nil))
-        
         self.presentViewController(alertController, animated: true, completion: nil)
         
     }
@@ -48,12 +47,22 @@ class ViewController: UIViewController, UITableViewDataSource {
     // contents of each cell
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyTestCell")
-        var (quizName, quizSubHeading) = quizzes[indexPath.row]
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("Row", forIndexPath: indexPath)
+        
+        
+        //let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyTestCell")
+        let (quizName, quizSubHeading) = quizzes[indexPath.row]
         cell.textLabel?.text = quizName
-        cell.imageView!.image = UIImage(named: "nyan_cat")
         cell.detailTextLabel?.text = quizSubHeading
-        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+
+        
+        // Adding an image to "row" under the properties inspector appears to do the same thing as this code
+        // Same with the chevron code
+        
+        //cell.imageView!.image = UIImage(named: "nyan_cat")
+        //cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+
         return cell
     }
     
