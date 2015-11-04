@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource {
     
     
-    var quizzes = [("Mathematics", "Mathematics quiz subheading"), ("Marvel Super Heroes", "Super Heroes subheading"), ("Science", "Science subheading")]
+    var quizzes = [("Mathematics", "Mathematics Quiz Subheading"), ("Marvel Super Heroes", "Super Heroes Subheading"), ("Science", "Science Subheading")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
