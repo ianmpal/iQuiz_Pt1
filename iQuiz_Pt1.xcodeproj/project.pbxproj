@@ -481,6 +481,7 @@
 				3C13824E1BE87ED800776E45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C13824F1BE87ED800776E45 /* Build configuration list for PBXNativeTarget "iQuiz_Pt1Tests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +490,7 @@
 				3C1382511BE87ED800776E45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C1382521BE87ED800776E45 /* Build configuration list for PBXNativeTarget "iQuiz_Pt1UITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +499,7 @@
 				3C1382541BE87ED800776E45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

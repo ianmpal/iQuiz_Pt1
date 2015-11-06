@@ -8,7 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    
+    
     
     
     var quizzes = [("Mathematics", "Mathematics Quiz Subheading"), ("Marvel Super Heroes", "Super Heroes Subheading"), ("Science", "Science Subheading")]
@@ -17,11 +20,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         self.title = "iQuiz"
         // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
     }
     
     // return how many sections are in table
@@ -34,6 +33,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return quizzes.count
     }
+    
     
     @IBAction func settingsPressed(sender: AnyObject) {
         
@@ -61,11 +61,47 @@ class ViewController: UIViewController, UITableViewDataSource {
         // Same with the chevron code
         
         //cell.imageView!.image = UIImage(named: "nyan_cat")
+        
+        //chevron code
         //cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
 
         return cell
     }
     
+
+     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("hello")
+    
+    }
+//
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        print("hello")
+//    }
+
+    
+//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        let alertController = UIAlertController(title: "Settings Go Here", message:
+//            "Subtitle here", preferredStyle: UIAlertControllerStyle.Alert)
+//        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler: nil))
+//        self.presentViewController(alertController, animated: true, completion: nil)
+//    }
+    
+    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//       
+//        
+//        if segue.identifier == "Mathematics" {
+//            
+//            let math = segue.destinationViewController as? MathViewController
+//           // math?.label.text = "this is text"
+//            
+//        }
+//        
+//        var math = MathViewController()
+//            
+//      }
+    
+ 
     
     
     
@@ -74,6 +110,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     
 }
 
+// http://stackoverflow.com/questions/28323925/push-segue-from-uitableviewcell-to-viewcontroller-in-swift
 
 
 

@@ -4,10 +4,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--iQuiz-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iQuiz_Pt1" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Nlu-af-Ihg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -47,9 +46,6 @@
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
-                                <connections>
-                                    <segue destination="SdZ-NM-Pp5" kind="show" id="IqO-iL-3PI"/>
-                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="QOA-J0-dOk">
                                 <rect key="frame" x="0.0" y="136" width="600" height="44"/>
@@ -94,9 +90,10 @@
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="BYZ-38-t0r" id="Ghy-TZ-ggb"/>
+                            <outlet property="delegate" destination="BYZ-38-t0r" id="vpj-gu-ZKC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="bFo-8f-kGC">
+                    <navigationItem key="navigationItem" title="iQuiz" id="bFo-8f-kGC">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="mHn-F7-QEV">
                             <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -105,36 +102,47 @@
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1005" y="353"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="Y0D-Bs-bsu">
+        <scene sceneID="NZm-kV-R2L">
             <objects>
-                <viewController id="SdZ-NM-Pp5" sceneMemberID="viewController">
+                <viewController id="RjC-ju-tOA" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="DDq-WR-Xee"/>
-                        <viewControllerLayoutGuide type="bottom" id="OGf-dg-5DD"/>
+                        <viewControllerLayoutGuide type="top" id="7vn-e6-nwB"/>
+                        <viewControllerLayoutGuide type="bottom" id="cKu-xn-bl0"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Hj9-zv-2fz">
+                    <view key="view" contentMode="scaleToFill" id="J2n-ne-jph">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mP-dg-mO8">
-                                <rect key="frame" x="279" y="289" width="42" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iR6-yM-EpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NYv-ts-Euq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1673" y="341"/>
+            <point key="canvasLocation" x="1891" y="88"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZiO-Vs-bFw">
+            <objects>
+                <viewController id="qIJ-Dg-J9b" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8co-Em-Sjp"/>
+                        <viewControllerLayoutGuide type="bottom" id="6JQ-HM-keM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="52S-8M-Oo2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fAL-5l-9vS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1887" y="959"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uAO-II-qGG">
