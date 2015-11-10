@@ -16,6 +16,7 @@
 		3C1382481BE87ED800776E45 /* iQuiz_Pt1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1382471BE87ED800776E45 /* iQuiz_Pt1UITests.swift */; };
 		3C5CCB751BEC56A30067891E /* QuizController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5CCB741BEC56A30067891E /* QuizController.swift */; settings = {ASSET_TAGS = (); }; };
 		3C9DF97D1BF1BFFB00B9F04E /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9DF97C1BF1BFFB00B9F04E /* AnswerView.swift */; settings = {ASSET_TAGS = (); }; };
+		3C9DF97F1BF2ACD100B9F04E /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9DF97E1BF2ACD100B9F04E /* FinalViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		3C1382491BE87ED800776E45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C5CCB741BEC56A30067891E /* QuizController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizController.swift; sourceTree = "<group>"; };
 		3C9DF97C1BF1BFFB00B9F04E /* AnswerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
+		3C9DF97E1BF2ACD100B9F04E /* FinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				3C1382271BE87ED700776E45 /* AppDelegate.swift */,
 				3C1382291BE87ED700776E45 /* ViewController.swift */,
 				3C13822B1BE87ED700776E45 /* Main.storyboard */,
+				3C9DF97E1BF2ACD100B9F04E /* FinalViewController.swift */,
 				3C9DF97C1BF1BFFB00B9F04E /* AnswerView.swift */,
 				3C5CCB741BEC56A30067891E /* QuizController.swift */,
 				3C13822E1BE87ED800776E45 /* Assets.xcassets */,
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C9DF97F1BF2ACD100B9F04E /* FinalViewController.swift in Sources */,
 				3C13822A1BE87ED700776E45 /* ViewController.swift in Sources */,
 				3C1382281BE87ED700776E45 /* AppDelegate.swift in Sources */,
 				3C9DF97D1BF1BFFB00B9F04E /* AnswerView.swift in Sources */,

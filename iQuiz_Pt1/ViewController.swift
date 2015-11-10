@@ -16,11 +16,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var quizzes = [("Mathematics", "Mathematics Quiz Subheading"), ("Marvel Super Heroes", "Super Heroes Subheading"), ("Science", "Science Subheading")]
     
-    var mathQuestions = [("What is 2*2?", "9", "4", "3", "2", 3)]
+    var mathQuestions = [("What is 2*2?", "9", "4", "3", "2", "9")]
     
-    var heroQuestions = [("Who shoots webs out of his hands?", "Superman", "Batman", "Spiderman", "Loki", 3)]
+    var heroQuestions = [("Who shoots webs out of his hands?", "Superman", "Batman", "Spiderman", "Loki", "Spiderman"), ("Who wears a red cape?", "Superman", "Batman", "Spiderman", "Loki", "Superman")]
     
-    var scienceQuestions = [("What is the English name for the element Hg?", "Superman", "Batman", "Spiderman", "Loki", 3)]
+    var scienceQuestions = [("What is the English name for the element Hg?", "Mercury", "Plutonium", "Helium", "Oxygen", "Mercury")]
     
     override func viewDidLoad() {
         super.viewDidLoad()

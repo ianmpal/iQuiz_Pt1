@@ -10,37 +10,49 @@ import UIKit
 
 class QuizController: UIViewController {
     
-    var questions = [(String, String, String, String, String, Int)]()
+    var questions = [(String, String, String, String, String, String)]()
     
     var answerSelected = false
+    var correctAnswer = false
+    var correctAnswerText = ""
+    var score = 0
 
     @IBOutlet weak var questionText: UILabel!
     
     @IBOutlet weak var answerOne: UIButton!
     @IBAction func answerOnePressed(sender: AnyObject) {
-        print("test1")
         answerSelected = true
+        if questions[0].1 == correctAnswerText {
+            correctAnswer = true
+        }
     }
     
     @IBOutlet weak var answerTwo: UIButton!
     @IBAction func answerTwoPressed(sender: AnyObject) {
-        print("test2")
         answerSelected = true
+        if questions[0].2 == correctAnswerText {
+            correctAnswer = true
+
+        }
        
     }
     
     
     @IBOutlet weak var answerThree: UIButton!
     @IBAction func answerThreePressed(sender: AnyObject) {
-        print("test3")
         answerSelected = true
+        if questions[0].3 == correctAnswerText {
+            correctAnswer = true
+        }
 
     }
 
     @IBOutlet weak var answerFour: UIButton!
     @IBAction func answerFourPressed(sender: AnyObject) {
-        print("test4")
         answerSelected = true
+        if questions[0].4 == correctAnswerText {
+            correctAnswer = true
+        }
 
     }
     
@@ -65,6 +77,8 @@ class QuizController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        correctAnswerText = questions[0].5
 
         questionText.text = questions[0].0
 
@@ -85,9 +99,12 @@ class QuizController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if let qController = segue.destinationViewController as? AnswerView {
-            qController.questions = questions
-            print("Hit prepareforSegue")
+        if let aController = segue.destinationViewController as? AnswerView {
+            aController.questions = questions
+            aController.correctAnswer = correctAnswer
+            aController.correctAnswerText = correctAnswerText
+            
+            //print("Hit prepareforSegue")
         }
     }
       

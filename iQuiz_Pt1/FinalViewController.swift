@@ -1,36 +1,19 @@
 //
-//  AnswerView.swift
+//  FinalViewController.swift
 //  iQuiz_Pt1
 //
-//  Created by Ian Palmgren on 11/9/15.
+//  Created by Ian Palmgren on 11/10/15.
 //  Copyright © 2015 Ian Palmgren. All rights reserved.
 //
 
 import UIKit
 
-class AnswerView: UIViewController {
+class FinalViewController: UIViewController {
     
-    var questions = [(String, String, String, String, String, String)]()
-    var correctAnswer = false
-    var correctAnswerText = ""
     var score = 0
-
-    @IBOutlet weak var answerText: UILabel!
-    @IBOutlet weak var questionText: UILabel!
-    @IBOutlet weak var actualAnswer: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        questionText.text = questions[0].0
-        
-        if correctAnswer {
-            answerText.text = "You got it right!"
-        } else {
-            answerText.text = "Sorry, champ :/"
-        }
-        
-        actualAnswer.text = correctAnswerText
-        //print(questions)
 
         // Do any additional setup after loading the view.
     }
