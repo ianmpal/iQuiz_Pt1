@@ -17,13 +17,14 @@ class QuizController: UIViewController {
     var correctAnswerText = ""
     var score = 0
     var questionsLeft = 0
+    var currentQuestion = 0
 
     @IBOutlet weak var questionText: UILabel!
     
     @IBOutlet weak var answerOne: UIButton!
     @IBAction func answerOnePressed(sender: AnyObject) {
         answerSelected = true
-        if questions[0].1 == correctAnswerText {
+        if questions[currentQuestion].1 == correctAnswerText {
             correctAnswer = true
             score++
         }
@@ -32,7 +33,7 @@ class QuizController: UIViewController {
     @IBOutlet weak var answerTwo: UIButton!
     @IBAction func answerTwoPressed(sender: AnyObject) {
         answerSelected = true
-        if questions[0].2 == correctAnswerText {
+        if questions[currentQuestion].2 == correctAnswerText {
             correctAnswer = true
             score++
 
@@ -44,7 +45,7 @@ class QuizController: UIViewController {
     @IBOutlet weak var answerThree: UIButton!
     @IBAction func answerThreePressed(sender: AnyObject) {
         answerSelected = true
-        if questions[0].3 == correctAnswerText {
+        if questions[currentQuestion].3 == correctAnswerText {
             correctAnswer = true
             score++
         }
@@ -54,7 +55,7 @@ class QuizController: UIViewController {
     @IBOutlet weak var answerFour: UIButton!
     @IBAction func answerFourPressed(sender: AnyObject) {
         answerSelected = true
-        if questions[0].4 == correctAnswerText {
+        if questions[currentQuestion].4 == correctAnswerText {
             correctAnswer = true
             score++
         }
@@ -65,6 +66,7 @@ class QuizController: UIViewController {
     
     @IBAction func submitPressed(sender: AnyObject) {
         questionsLeft--
+        currentQuestion++
         checkAnswer()
     }
     

@@ -15,6 +15,7 @@ class AnswerView: UIViewController {
     var correctAnswerText = ""
     var score = 0
     var questionsLeft = 0
+    var currentQuestion = 0
 
     @IBOutlet weak var answerText: UILabel!
     @IBOutlet weak var questionText: UILabel!
@@ -23,6 +24,8 @@ class AnswerView: UIViewController {
     @IBAction func nextPressed(sender: AnyObject) {
         if questionsLeft > 0 {
             self.performSegueWithIdentifier("answerToQuiz", sender: nil)
+        } else {
+            self.performSegueWithIdentifier("finalSegue", sender: nil)
         }
     }
 
@@ -32,9 +35,9 @@ class AnswerView: UIViewController {
         questionText.text = questions[0].0
         
         if correctAnswer {
-            answerText.text = "You got it right!"
+            answerText.text = "You got it right! The correct answer is: "
         } else {
-            answerText.text = "Sorry, champ :/"
+            answerText.text = "Sorry, champ :/ The correct answer is: "
         }
         
         actualAnswer.text = correctAnswerText
@@ -54,7 +57,6 @@ class AnswerView: UIViewController {
             qController.correctAnswer = correctAnswer
             qController.correctAnswerText = correctAnswerText
             qController.questionsLeft = questionsLeft
-            
         }
     }
 
