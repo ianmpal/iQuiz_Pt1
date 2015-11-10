@@ -11,10 +11,12 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
-    
+    var selectedTitle : String = ""
     
     
     var quizzes = [("Mathematics", "Mathematics Quiz Subheading"), ("Marvel Super Heroes", "Super Heroes Subheading"), ("Science", "Science Subheading")]
+    
+    var heroQuestions = [("hello", "hello2")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,27 +71,34 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
 
-     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("hello")
-    
-    }
+//     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        print("hello")
+//    
+//    }
 //
 //    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 //        print("hello")
 //    }
 
     
-//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 //        let alertController = UIAlertController(title: "Settings Go Here", message:
 //            "Subtitle here", preferredStyle: UIAlertControllerStyle.Alert)
 //        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler: nil))
 //        self.presentViewController(alertController, animated: true, completion: nil)
-//    }
+        
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        
+        self.selectedTitle = (cell?.textLabel?.text)!
+        self.performSegueWithIdentifier("quiz", sender: nil)
+        
+    }
     
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//       
-//        
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+       
+        
 //        if segue.identifier == "Mathematics" {
 //            
 //            let math = segue.destinationViewController as? MathViewController
@@ -98,8 +107,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //        }
 //        
 //        var math = MathViewController()
-//            
-//      }
+        
+        if selectedTitle == "Mathematics" {
+            if let qController = segue.destinationViewController as? QuizController {
+                qController.questions = heroQuestions
+            }
+        }
+        
+        if selectedTitle == "Marvel Super Heroes" {
+            if let qController = segue.destinationViewController as? QuizController {
+                qController.questions = heroQuestions
+            }
+        }
+        
+        if selectedTitle == "Science" {
+            if let qController = segue.destinationViewController as? QuizController {
+                qController.questions = heroQuestions
+            }
+        }
+        
+        
+      }
     
  
     
