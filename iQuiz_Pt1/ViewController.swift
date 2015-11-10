@@ -16,7 +16,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var quizzes = [("Mathematics", "Mathematics Quiz Subheading"), ("Marvel Super Heroes", "Super Heroes Subheading"), ("Science", "Science Subheading")]
     
+    var mathQuestions = [("What is 2*2?", "9", "4", "3", "2", 3)]
+    
     var heroQuestions = [("Who shoots webs out of his hands?", "Superman", "Batman", "Spiderman", "Loki", 3)]
+    
+    var scienceQuestions = [("What is the English name for the element Hg?", "Superman", "Batman", "Spiderman", "Loki", 3)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,13 +86,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     
      func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        let alertController = UIAlertController(title: "Settings Go Here", message:
-//            "Subtitle here", preferredStyle: UIAlertControllerStyle.Alert)
-//        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler: nil))
-//        self.presentViewController(alertController, animated: true, completion: nil)
-        
         let cell = tableView.cellForRowAtIndexPath(indexPath)
-        
         self.selectedTitle = (cell?.textLabel?.text)!
         self.performSegueWithIdentifier("quiz", sender: nil)
         
@@ -98,19 +96,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
        
-        
-//        if segue.identifier == "Mathematics" {
-//            
-//            let math = segue.destinationViewController as? MathViewController
-//           // math?.label.text = "this is text"
-//            
-//        }
-//        
-//        var math = MathViewController()
-        
+     
         if selectedTitle == "Mathematics" {
             if let qController = segue.destinationViewController as? QuizController {
-                qController.questions = heroQuestions
+                qController.questions = mathQuestions
             }
         }
         
@@ -122,7 +111,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         if selectedTitle == "Science" {
             if let qController = segue.destinationViewController as? QuizController {
-                qController.questions = heroQuestions
+                qController.questions = scienceQuestions
             }
         }
         

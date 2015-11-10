@@ -129,7 +129,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPh-Q8-wuU">
-                                <rect key="frame" x="35" y="231" width="530" height="46"/>
+                                <rect key="frame" x="35" y="196" width="530" height="46"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.32369395753705887" green="0.74026505235602102" blue="0.43694945976039634" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button1">
@@ -140,7 +140,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fe8-4k-8Cy">
-                                <rect key="frame" x="35" y="306" width="530" height="46"/>
+                                <rect key="frame" x="35" y="271" width="530" height="46"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.32369395753705887" green="0.74026505235602102" blue="0.43694945976039634" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button2">
@@ -151,7 +151,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e86-6u-irT">
-                                <rect key="frame" x="35" y="381" width="530" height="43"/>
+                                <rect key="frame" x="35" y="346" width="530" height="43"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.32369395753705887" green="0.74026505235602102" blue="0.43694945976039634" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button3">
@@ -162,7 +162,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xu-NA-I8b">
-                                <rect key="frame" x="35" y="448" width="530" height="44"/>
+                                <rect key="frame" x="35" y="413" width="530" height="44"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.32369395753705887" green="0.74026505235602102" blue="0.43694945976039634" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button4">
@@ -170,6 +170,14 @@
                                 </state>
                                 <connections>
                                     <action selector="answerFourPressed:" destination="RjC-ju-tOA" eventType="touchUpInside" id="Fgc-9a-LHI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zu7-tx-AgN">
+                                <rect key="frame" x="215" y="494" width="170" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Submit Answer"/>
+                                <connections>
+                                    <action selector="submitPressed:" destination="RjC-ju-tOA" eventType="touchUpInside" id="IMF-LA-bN3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -199,34 +207,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NYv-ts-Euq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1891" y="88"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="ZiO-Vs-bFw">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fAL-5l-9vS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="qIJ-Dg-J9b" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8co-Em-Sjp"/>
-                        <viewControllerLayoutGuide type="bottom" id="6JQ-HM-keM"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="52S-8M-Oo2">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8a-ge-fAI">
-                                <rect key="frame" x="311" y="289" width="10" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="1887" y="959"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uAO-II-qGG">

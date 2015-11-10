@@ -11,28 +11,55 @@ import UIKit
 class QuizController: UIViewController {
     
     var questions = [(String, String, String, String, String, Int)]()
+    
+    var answerSelected = false
 
     @IBOutlet weak var questionText: UILabel!
     
     @IBOutlet weak var answerOne: UIButton!
     @IBAction func answerOnePressed(sender: AnyObject) {
         print("test1")
+        answerSelected = true
     }
     
     @IBOutlet weak var answerTwo: UIButton!
     @IBAction func answerTwoPressed(sender: AnyObject) {
         print("test2")
+        answerSelected = true
+       
     }
     
     
     @IBOutlet weak var answerThree: UIButton!
     @IBAction func answerThreePressed(sender: AnyObject) {
         print("test3")
+        answerSelected = true
+
     }
 
     @IBOutlet weak var answerFour: UIButton!
     @IBAction func answerFourPressed(sender: AnyObject) {
         print("test4")
+        answerSelected = true
+
+    }
+    
+    
+    
+    @IBAction func submitPressed(sender: AnyObject) {
+        checkAnswer()
+    }
+    
+    
+    func checkAnswer() {
+        if answerSelected == false {
+            let alertController = UIAlertController(title: "Please select an answer before continuing", message:
+                "", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler: nil))
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+        
+        self.performSegueWithIdentifier("answer", sender: nil)
     }
     
     
@@ -50,12 +77,25 @@ class QuizController: UIViewController {
         
         answerFour.setTitle(questions[0].4, forState: .Normal)
         
-        print(questions[0])
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+       
+        
+        if selectedTitle == "Mathematics" {
+            if let qController = segue.destinationViewController as? QuizController {
+                qController.questions = mathQuestions
+            }
+        }
+      
+        
+        
     }
     
 
