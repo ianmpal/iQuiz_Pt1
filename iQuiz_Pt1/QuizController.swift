@@ -86,13 +86,10 @@ class QuizController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-       
-        
-        if selectedTitle == "Mathematics" {
-            if let qController = segue.destinationViewController as? QuizController {
-                qController.questions = mathQuestions
-            }
+        if let qController = segue.destinationViewController as? AnswerView {
+            qController.questions = questions
         }
+    }
       
         
         
@@ -109,4 +106,4 @@ class QuizController: UIViewController {
     }
     */
 
-}
+

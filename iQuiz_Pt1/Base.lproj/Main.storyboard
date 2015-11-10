@@ -178,6 +178,7 @@
                                 <state key="normal" title="Submit Answer"/>
                                 <connections>
                                     <action selector="submitPressed:" destination="RjC-ju-tOA" eventType="touchUpInside" id="IMF-LA-bN3"/>
+                                    <segue destination="cCt-fY-vFG" kind="show" identifier="answer" id="vJy-Fn-Dna"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -207,6 +208,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NYv-ts-Euq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1891" y="88"/>
+        </scene>
+        <!--Answer View-->
+        <scene sceneID="kCE-sW-jaX">
+            <objects>
+                <viewController id="cCt-fY-vFG" customClass="AnswerView" customModule="iQuiz_Pt1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="phE-JB-giB"/>
+                        <viewControllerLayoutGuide type="bottom" id="F2t-TT-2he"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oNd-nL-R7h">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TEST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYx-6e-ZT0">
+                                <rect key="frame" x="280" y="289" width="41" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TyJ-TG-2Uh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2630" y="107"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uAO-II-qGG">

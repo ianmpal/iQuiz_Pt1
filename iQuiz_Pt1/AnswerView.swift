@@ -9,9 +9,14 @@
 import UIKit
 
 class AnswerView: UIViewController {
+    
+    var questions = [(String, String, String, String, String, Int)]()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(questions)
 
         // Do any additional setup after loading the view.
     }
