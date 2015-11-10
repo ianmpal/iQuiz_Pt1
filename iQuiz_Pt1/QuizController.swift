@@ -10,17 +10,47 @@ import UIKit
 
 class QuizController: UIViewController {
     
-    var questions = [(String, String)]()
+    var questions = [(String, String, String, String, String, Int)]()
 
-    @IBOutlet weak var question1: UILabel!
+    @IBOutlet weak var questionText: UILabel!
+    
+    @IBOutlet weak var answerOne: UIButton!
+    @IBAction func answerOnePressed(sender: AnyObject) {
+        print("test1")
+    }
+    
+    @IBOutlet weak var answerTwo: UIButton!
+    @IBAction func answerTwoPressed(sender: AnyObject) {
+        print("test2")
+    }
+    
+    
+    @IBOutlet weak var answerThree: UIButton!
+    @IBAction func answerThreePressed(sender: AnyObject) {
+        print("test3")
+    }
+
+    @IBOutlet weak var answerFour: UIButton!
+    @IBAction func answerFourPressed(sender: AnyObject) {
+        print("test4")
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        question1.text = questions[0].0
-        print(question1.text)
+        questionText.text = questions[0].0
+
+        answerOne.setTitle(questions[0].1, forState: .Normal)
+        
+        answerTwo.setTitle(questions[0].2, forState: .Normal)
+        
+        answerThree.setTitle(questions[0].3, forState: .Normal)
+        
+        answerFour.setTitle(questions[0].4, forState: .Normal)
+        
+        print(questions[0])
     }
 
     override func didReceiveMemoryWarning() {
