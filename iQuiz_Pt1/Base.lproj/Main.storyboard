@@ -178,7 +178,6 @@
                                 <state key="normal" title="Submit Answer"/>
                                 <connections>
                                     <action selector="submitPressed:" destination="RjC-ju-tOA" eventType="touchUpInside" id="IMF-LA-bN3"/>
-                                    <segue destination="cCt-fY-vFG" kind="show" identifier="answer" id="vJy-Fn-Dna"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -203,6 +202,7 @@
                         <outlet property="answerThree" destination="e86-6u-irT" id="zdm-WU-tdQ"/>
                         <outlet property="answerTwo" destination="fe8-4k-8Cy" id="OT6-RR-cYu"/>
                         <outlet property="questionText" destination="x3B-Hm-gxs" id="G0u-u1-dZm"/>
+                        <segue destination="cCt-fY-vFG" kind="show" identifier="answer" id="o92-eg-elH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NYv-ts-Euq" userLabel="First Responder" sceneMemberID="firstResponder"/>

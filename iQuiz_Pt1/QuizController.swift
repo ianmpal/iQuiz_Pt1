@@ -66,7 +66,6 @@ class QuizController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         questionText.text = questions[0].0
 
         answerOne.setTitle(questions[0].1, forState: .Normal)
@@ -88,12 +87,13 @@ class QuizController: UIViewController {
         
         if let qController = segue.destinationViewController as? AnswerView {
             qController.questions = questions
+            print("Hit prepareforSegue")
         }
     }
       
         
         
-    }
+}
     
 
     /*
