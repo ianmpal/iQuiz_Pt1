@@ -14,13 +14,21 @@ class AnswerView: UIViewController {
     var correctAnswer = false
     var correctAnswerText = ""
     var score = 0
+    var questionsLeft = 0
 
     @IBOutlet weak var answerText: UILabel!
     @IBOutlet weak var questionText: UILabel!
     @IBOutlet weak var actualAnswer: UILabel!
+    
+    @IBAction func nextPressed(sender: AnyObject) {
+        if questionsLeft > 0 {
+            self.performSegueWithIdentifier("answerToQuiz", sender: nil)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(questions)
         questionText.text = questions[0].0
         
         if correctAnswer {
@@ -30,9 +38,7 @@ class AnswerView: UIViewController {
         }
         
         actualAnswer.text = correctAnswerText
-        //print(questions)
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,6 +46,17 @@ class AnswerView: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if let qController = segue.destinationViewController as? QuizController {
+            qController.questions = questions
+            qController.correctAnswer = correctAnswer
+            qController.correctAnswerText = correctAnswerText
+            qController.questionsLeft = questionsLeft
+            
+        }
+    }
 
     /*
     // MARK: - Navigation

@@ -100,18 +100,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if selectedTitle == "Mathematics" {
             if let qController = segue.destinationViewController as? QuizController {
                 qController.questions = mathQuestions
+                qController.questionsLeft = mathQuestions.count
             }
         }
         
         if selectedTitle == "Marvel Super Heroes" {
             if let qController = segue.destinationViewController as? QuizController {
                 qController.questions = heroQuestions
+                qController.questionsLeft = heroQuestions.count
+
             }
         }
         
         if selectedTitle == "Science" {
             if let qController = segue.destinationViewController as? QuizController {
                 qController.questions = scienceQuestions
+                qController.questionsLeft = scienceQuestions.count
+
             }
         }
         

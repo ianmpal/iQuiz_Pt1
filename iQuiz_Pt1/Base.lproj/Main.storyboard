@@ -253,6 +253,9 @@
                                 <rect key="frame" x="277" y="397" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextPressed:" destination="cCt-fY-vFG" eventType="touchUpInside" id="b6V-yH-RTe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -273,11 +276,12 @@
                         <outlet property="answerText" destination="ZTI-Vz-zB5" id="WJf-cm-yLo"/>
                         <outlet property="questionText" destination="WYx-6e-ZT0" id="1ta-uy-xBY"/>
                         <segue destination="0Z8-iM-2aQ" kind="show" identifier="finalSegue" id="rfb-ll-rgd"/>
+                        <segue destination="RjC-ju-tOA" kind="show" identifier="answerToQuiz" id="jE9-Md-T9m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TyJ-TG-2Uh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2630" y="107"/>
+            <point key="canvasLocation" x="2650" y="101"/>
         </scene>
         <!--Final View Controller-->
         <scene sceneID="bUe-gK-VrZ">
@@ -321,4 +325,7 @@
     <resources>
         <image name="nyan_cat" width="900" height="643"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="jE9-Md-T9m"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -16,6 +16,7 @@ class QuizController: UIViewController {
     var correctAnswer = false
     var correctAnswerText = ""
     var score = 0
+    var questionsLeft = 0
 
     @IBOutlet weak var questionText: UILabel!
     
@@ -24,6 +25,7 @@ class QuizController: UIViewController {
         answerSelected = true
         if questions[0].1 == correctAnswerText {
             correctAnswer = true
+            score++
         }
     }
     
@@ -32,6 +34,7 @@ class QuizController: UIViewController {
         answerSelected = true
         if questions[0].2 == correctAnswerText {
             correctAnswer = true
+            score++
 
         }
        
@@ -43,6 +46,7 @@ class QuizController: UIViewController {
         answerSelected = true
         if questions[0].3 == correctAnswerText {
             correctAnswer = true
+            score++
         }
 
     }
@@ -52,6 +56,7 @@ class QuizController: UIViewController {
         answerSelected = true
         if questions[0].4 == correctAnswerText {
             correctAnswer = true
+            score++
         }
 
     }
@@ -59,6 +64,7 @@ class QuizController: UIViewController {
     
     
     @IBAction func submitPressed(sender: AnyObject) {
+        questionsLeft--
         checkAnswer()
     }
     
@@ -77,6 +83,8 @@ class QuizController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("questions left" + String(questionsLeft))
         
         correctAnswerText = questions[0].5
 
@@ -103,8 +111,8 @@ class QuizController: UIViewController {
             aController.questions = questions
             aController.correctAnswer = correctAnswer
             aController.correctAnswerText = correctAnswerText
+            aController.questionsLeft = questionsLeft
             
-            //print("Hit prepareforSegue")
         }
     }
       
