@@ -15,7 +15,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Row" textLabel="wL0-7d-5P1" detailTextLabel="BUD-tS-iCA" imageView="yUk-zV-hjy" style="IBUITableViewCellStyleSubtitle" id="Zrx-42-c6F">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zrx-42-c6F" id="gbm-fg-rNn">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
@@ -48,7 +48,7 @@
                                 <animations/>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="QOA-J0-dOk">
-                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QOA-J0-dOk" id="SQL-dy-RsT">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
@@ -58,7 +58,7 @@
                                 <animations/>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="BsY-yx-2eV">
-                                <rect key="frame" x="0.0" y="180" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="116" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BsY-yx-2eV" id="5bg-hP-apQ">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
@@ -68,7 +68,7 @@
                                 <animations/>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="44L-3q-PNC">
-                                <rect key="frame" x="0.0" y="224" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="160" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="44L-3q-PNC" id="co9-Cp-smo">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
@@ -78,7 +78,7 @@
                                 <animations/>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="3gG-Lu-xBG">
-                                <rect key="frame" x="0.0" y="268" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="204" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3gG-Lu-xBG" id="OcO-lX-jtM">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
@@ -295,13 +295,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FINAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6V-Ev-zRr">
-                                <rect key="frame" x="274" y="259" width="47" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGV-1W-Ky5">
                                 <rect key="frame" x="68" y="316" width="450" height="21"/>
                                 <animations/>
@@ -309,8 +302,17 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quiz Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hqq-7C-WMu">
-                                <rect key="frame" x="244" y="371" width="77" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0aJ-6w-aYr">
+                                <rect key="frame" x="280" y="451" width="41" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Finish"/>
+                                <connections>
+                                    <action selector="finishedPressed:" destination="0Z8-iM-2aQ" eventType="touchUpInside" id="cQb-RW-FNe"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="VRx-q0-eRI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="FINAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6V-Ev-zRr">
+                                <rect key="frame" x="26" y="258" width="549" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -320,12 +322,16 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="G6V-Ev-zRr" firstAttribute="centerX" secondItem="gwA-lQ-TD2" secondAttribute="centerX" id="0f3-Kq-Q16"/>
                             <constraint firstItem="YGV-1W-Ky5" firstAttribute="width" secondItem="gwA-lQ-TD2" secondAttribute="width" id="5dG-Ii-wdV"/>
+                            <constraint firstItem="0aJ-6w-aYr" firstAttribute="centerX" secondItem="gwA-lQ-TD2" secondAttribute="centerX" id="Khp-ED-upx"/>
                             <constraint firstItem="YGV-1W-Ky5" firstAttribute="centerX" secondItem="gwA-lQ-TD2" secondAttribute="centerX" id="VTD-jH-k5V"/>
+                            <constraint firstItem="G6V-Ev-zRr" firstAttribute="width" secondItem="gwA-lQ-TD2" secondAttribute="width" id="Vh5-ta-5qJ"/>
+                            <constraint firstItem="0aJ-6w-aYr" firstAttribute="width" secondItem="gwA-lQ-TD2" secondAttribute="width" id="YNj-1I-sJx"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="questionCount" destination="Hqq-7C-WMu" id="i1r-yY-ZT9"/>
+                        <outlet property="header" destination="G6V-Ev-zRr" id="vYR-7r-zyV"/>
                         <outlet property="scoreLabel" destination="YGV-1W-Ky5" id="TKM-6x-rEL"/>
                     </connections>
                 </viewController>
@@ -357,6 +363,7 @@
         <image name="nyan_cat" width="900" height="643"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jE9-Md-T9m"/>
+        <segue reference="UFA-La-CGl"/>
+        <segue reference="VRx-q0-eRI"/>
     </inferredMetricsTieBreakers>
 </document>

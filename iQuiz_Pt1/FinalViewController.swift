@@ -12,14 +12,27 @@ class FinalViewController: UIViewController {
     
     var questions = [(String, String, String, String, String, String)]()
     var score = 0
+    var finalPercent: Double = 0.0
 
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var questionCount: UILabel!
+    @IBOutlet weak var header: UILabel!
     
+    @IBAction func finishedPressed(sender: AnyObject) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        finalPercent = (Double(score) / Double(questions.count))*100
+        print(finalPercent)
+        
+        if finalPercent == 100.0 {
+            header.text = String(finalPercent) + "%, Perfect!"
+        } else if finalPercent > 74 {
+            header.text = String(finalPercent) + "%, Almost there!"
+        }
+        
+        //header.text = String(finalPercent) + "%"
         scoreLabel.text = "Your Score is: " + String(score) + "/" + String(questions.count)
-        questionCount.text = String(questions.count)
     
 
         // Do any additional setup after loading the view.
