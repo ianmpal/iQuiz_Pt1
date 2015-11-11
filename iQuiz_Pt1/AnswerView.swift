@@ -57,7 +57,7 @@ class AnswerView: UIViewController {
         
             if let qController = segue.destinationViewController as? QuizController {
                 qController.questions = questions
-                qController.correctAnswer = correctAnswer
+                //qController.correctAnswer = correctAnswer
                 qController.correctAnswerText = correctAnswerText
                 qController.questionsLeft = questionsLeft
                 qController.currentQuestion = currentQuestion
