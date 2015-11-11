@@ -67,6 +67,7 @@ class AnswerView: UIViewController {
             
             if let fController = segue.destinationViewController as? FinalViewController {
                 fController.score = score
+                fController.questions = questions
             }
             
         }

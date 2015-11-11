@@ -10,12 +10,17 @@ import UIKit
 
 class FinalViewController: UIViewController {
     
+    var questions = [(String, String, String, String, String, String)]()
     var score = 0
 
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var questionCount: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        scoreLabel.text = String(score)
+        scoreLabel.text = "Your Score is: " + String(score) + "/" + String(questions.count)
+        questionCount.text = String(questions.count)
+    
 
         // Do any additional setup after loading the view.
     }

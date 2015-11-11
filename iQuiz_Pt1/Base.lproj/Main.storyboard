@@ -302,8 +302,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGV-1W-Ky5">
-                                <rect key="frame" x="273" y="316" width="45" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGV-1W-Ky5">
+                                <rect key="frame" x="68" y="316" width="450" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quiz Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hqq-7C-WMu">
+                                <rect key="frame" x="244" y="371" width="77" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -312,8 +319,13 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YGV-1W-Ky5" firstAttribute="width" secondItem="gwA-lQ-TD2" secondAttribute="width" id="5dG-Ii-wdV"/>
+                            <constraint firstItem="YGV-1W-Ky5" firstAttribute="centerX" secondItem="gwA-lQ-TD2" secondAttribute="centerX" id="VTD-jH-k5V"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="questionCount" destination="Hqq-7C-WMu" id="i1r-yY-ZT9"/>
                         <outlet property="scoreLabel" destination="YGV-1W-Ky5" id="TKM-6x-rEL"/>
                     </connections>
                 </viewController>

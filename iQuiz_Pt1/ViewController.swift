@@ -18,7 +18,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var mathQuestions = [("What is 2*2?", "9", "4", "3", "2", "9")]
     
-    var heroQuestions = [("Who shoots webs out of his hands?", "Superman", "Batman", "Spiderman", "Loki", "Spiderman"), ("Who wears a red cape?", "Superman", "Batman", "Spiderman", "Loki", "Superman")]
+    var heroQuestions = [("Who shoots webs out of his hands?", "Superman", "Batman", "Spiderman", "Loki", "Spiderman"), ("Who wears a red cape?", "Superman", "Batman", "Spiderman", "Loki", "Superman"), ("Who is Thor's brother?", "Superman", "Batman", "Spiderman", "Loki", "Loki"), ("Who's parents were killed by a robber?", "Batman", "The Joker", "Penguin", "Mr. Freeze", "Mr. Freeze")]
     
     var scienceQuestions = [("What is the English name for the element Hg?", "Mercury", "Plutonium", "Helium", "Oxygen", "Mercury")]
     
