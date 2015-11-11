@@ -20,8 +20,10 @@ class AnswerView: UIViewController {
     @IBOutlet weak var answerText: UILabel!
     @IBOutlet weak var questionText: UILabel!
     @IBOutlet weak var actualAnswer: UILabel!
+    @IBOutlet weak var nextButton: UIButton!
     
     @IBAction func nextPressed(sender: AnyObject) {
+        nextButton.layer.backgroundColor = UIColor.whiteColor().CGColor
         if questionsLeft > 0 {
             self.performSegueWithIdentifier("answerToQuiz", sender: nil)
         } else {
@@ -31,12 +33,14 @@ class AnswerView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        nextButton.layer.borderWidth = 2.0
+        nextButton.layer.borderColor = UIColor(white: 1.0, alpha: 100).CGColor
         questionText.text = questions[currentQuestion].0
         
         if correctAnswer {
             answerText.text = "You got it right! The correct answer is: "
         } else {
-            answerText.text = "Sorry, champ :/ The correct answer is: "
+            answerText.text = "Oops! That's wrong. The correct answer is: "
         }
         
         actualAnswer.text = correctAnswerText

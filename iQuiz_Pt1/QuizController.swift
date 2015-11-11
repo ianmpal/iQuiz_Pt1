@@ -20,6 +20,7 @@ class QuizController: UIViewController {
     var currentQuestion = 0
 
     @IBOutlet weak var questionText: UILabel!
+    @IBOutlet weak var submitButton: UIButton!
     
     @IBOutlet weak var answerOne: UIButton!
     @IBAction func answerOnePressed(sender: AnyObject) {
@@ -77,6 +78,9 @@ class QuizController: UIViewController {
     
     
     @IBAction func submitPressed(sender: AnyObject) {
+        if answerSelected {
+            submitButton.layer.backgroundColor = UIColor.whiteColor().CGColor
+        }
         questionsLeft--
         checkAnswer()
     }
@@ -96,6 +100,10 @@ class QuizController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        submitButton.layer.borderWidth = 2.0
+        submitButton.layer.borderColor = UIColor(white: 1.0, alpha: 100).CGColor
+
         
         correctAnswerText = questions[currentQuestion].5
 

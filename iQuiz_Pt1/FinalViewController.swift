@@ -17,13 +17,15 @@ class FinalViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var questionCount: UILabel!
     @IBOutlet weak var header: UILabel!
+    @IBOutlet weak var finishButton: UIButton!
     
     @IBAction func finishedPressed(sender: AnyObject) {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        finishButton.layer.borderWidth = 2.0
+        finishButton.layer.borderColor = UIColor(white: 1.0, alpha: 100).CGColor
         finalPercent = (Double(score) / Double(questions.count))*100
-        print(finalPercent)
         
         if finalPercent == 100.0 {
             header.text = String(finalPercent) + "%, Perfect!"

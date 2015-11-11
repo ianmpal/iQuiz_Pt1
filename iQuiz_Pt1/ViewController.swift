@@ -16,7 +16,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var quizzes = [("Mathematics", "Mathematics Quiz Subheading"), ("Marvel Super Heroes", "Super Heroes Subheading"), ("Science", "Science Subheading")]
     
-    var mathQuestions = [("What is 2*2?", "9", "4", "3", "2", "9")]
+    var mathQuestions = [("What is 2*2?", "9", "4", "3", "2", "4"), ("What is 50*3?", "6", "42", "108", "150", "150"), ("How many times does 3 go into 36?", "54", "12", "15", "10", "12"), ("What is the square root of 144?", "12", "11", "10", "9", "12"), ("What is 14%10", "6", "2", "3", "4", "4"), ("What is 2*36?", "67", "76", "75", "72", "72")]
     
     var heroQuestions = [("Who shoots webs out of his hands?", "Superman", "Batman", "Spiderman", "Loki", "Spiderman"), ("Who wears a red cape?", "Superman", "Batman", "Spiderman", "Loki", "Superman"), ("Who is Thor's brother?", "Superman", "Batman", "Spiderman", "Loki", "Loki"), ("Who's parents were killed by a robber?", "Batman", "The Joker", "Penguin", "Mr. Freeze", "Batman")]
     

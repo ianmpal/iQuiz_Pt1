@@ -51,6 +51,7 @@
 		3C1382471BE87ED800776E45 /* iQuiz_Pt1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iQuiz_Pt1UITests.swift; sourceTree = "<group>"; };
 		3C1382491BE87ED800776E45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C5CCB741BEC56A30067891E /* QuizController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizController.swift; sourceTree = "<group>"; };
+		3C95C3881BF2E5E700C290D8 /* jsonPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = jsonPlayground.playground; path = ../../jsonPlayground.playground; sourceTree = "<group>"; };
 		3C9DF97C1BF1BFFB00B9F04E /* AnswerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
 		3C9DF97E1BF2ACD100B9F04E /* FinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +106,7 @@
 			children = (
 				3C1382271BE87ED700776E45 /* AppDelegate.swift */,
 				3C1382291BE87ED700776E45 /* ViewController.swift */,
+				3C95C3881BF2E5E700C290D8 /* jsonPlayground.playground */,
 				3C13822B1BE87ED700776E45 /* Main.storyboard */,
 				3C9DF97E1BF2ACD100B9F04E /* FinalViewController.swift */,
 				3C9DF97C1BF1BFFB00B9F04E /* AnswerView.swift */,
