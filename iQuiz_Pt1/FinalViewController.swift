@@ -12,8 +12,10 @@ class FinalViewController: UIViewController {
     
     var score = 0
 
+    @IBOutlet weak var scoreLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        scoreLabel.text = String(score)
 
         // Do any additional setup after loading the view.
     }

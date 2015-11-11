@@ -22,6 +22,7 @@ class AnswerView: UIViewController {
     @IBOutlet weak var actualAnswer: UILabel!
     
     @IBAction func nextPressed(sender: AnyObject) {
+        print("score at NEXT is: " + String(score))
         if questionsLeft > 0 {
             self.performSegueWithIdentifier("answerToQuiz", sender: nil)
         } else {
@@ -31,8 +32,7 @@ class AnswerView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(questions)
-        questionText.text = questions[0].0
+        questionText.text = questions[currentQuestion].0
         
         if correctAnswer {
             answerText.text = "You got it right! The correct answer is: "
@@ -41,6 +41,7 @@ class AnswerView: UIViewController {
         }
         
         actualAnswer.text = correctAnswerText
+        currentQuestion++
 
     }
 
@@ -52,11 +53,22 @@ class AnswerView: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if let qController = segue.destinationViewController as? QuizController {
-            qController.questions = questions
-            qController.correctAnswer = correctAnswer
-            qController.correctAnswerText = correctAnswerText
-            qController.questionsLeft = questionsLeft
+        if questionsLeft > 0 {
+        
+            if let qController = segue.destinationViewController as? QuizController {
+                qController.questions = questions
+                qController.correctAnswer = correctAnswer
+                qController.correctAnswerText = correctAnswerText
+                qController.questionsLeft = questionsLeft
+                qController.currentQuestion = currentQuestion
+                qController.score = score
+            }
+        } else {
+            
+            if let fController = segue.destinationViewController as? FinalViewController {
+                fController.score = score
+            }
+            
         }
     }
 

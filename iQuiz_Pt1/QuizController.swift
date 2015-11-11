@@ -48,6 +48,7 @@ class QuizController: UIViewController {
         if questions[currentQuestion].3 == correctAnswerText {
             correctAnswer = true
             score++
+            print("score is: " + String(score))
         }
 
     }
@@ -66,7 +67,7 @@ class QuizController: UIViewController {
     
     @IBAction func submitPressed(sender: AnyObject) {
         questionsLeft--
-        currentQuestion++
+        print("current question at submt is" + String(currentQuestion))
         checkAnswer()
     }
     
@@ -86,19 +87,19 @@ class QuizController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("questions left" + String(questionsLeft))
-        
-        correctAnswerText = questions[0].5
+//        print("questions left" + String(questionsLeft))
+//        print("score is: " + String(score))
+        correctAnswerText = questions[currentQuestion].5
 
-        questionText.text = questions[0].0
+        questionText.text = questions[currentQuestion].0
 
-        answerOne.setTitle(questions[0].1, forState: .Normal)
+        answerOne.setTitle(questions[currentQuestion].1, forState: .Normal)
         
-        answerTwo.setTitle(questions[0].2, forState: .Normal)
+        answerTwo.setTitle(questions[currentQuestion].2, forState: .Normal)
         
-        answerThree.setTitle(questions[0].3, forState: .Normal)
+        answerThree.setTitle(questions[currentQuestion].3, forState: .Normal)
         
-        answerFour.setTitle(questions[0].4, forState: .Normal)
+        answerFour.setTitle(questions[currentQuestion].4, forState: .Normal)
         
     }
 
@@ -114,6 +115,8 @@ class QuizController: UIViewController {
             aController.correctAnswer = correctAnswer
             aController.correctAnswerText = correctAnswerText
             aController.questionsLeft = questionsLeft
+            aController.score = score
+            aController.currentQuestion = currentQuestion
             
         }
     }
