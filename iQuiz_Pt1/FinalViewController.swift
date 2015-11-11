@@ -12,10 +12,13 @@ class FinalViewController: UIViewController {
     
     var questions = [(String, String, String, String, String, String)]()
     var score = 0
+    var percent: Double = 0.0
     var finalPercent: Double = 0.0
+
 
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var questionCount: UILabel!
+    @IBOutlet weak var bigPercent: UIButton!
     @IBOutlet weak var header: UILabel!
     @IBOutlet weak var finishButton: UIButton!
     
@@ -25,14 +28,22 @@ class FinalViewController: UIViewController {
         super.viewDidLoad()
         finishButton.layer.borderWidth = 2.0
         finishButton.layer.borderColor = UIColor(white: 1.0, alpha: 100).CGColor
-        finalPercent = (Double(score) / Double(questions.count))*100
+        bigPercent.layer.borderWidth = 2.0
+        bigPercent.layer.borderColor = UIColor(white: 1.0, alpha: 100).CGColor
+        percent = (Double(score) / Double(questions.count))*100
+        finalPercent = Double(round(1000*percent)/1000)
+        bigPercent.setTitle(String(finalPercent) + "%", forState: .Normal)
         
         if finalPercent == 100.0 {
-            header.text = String(finalPercent) + "%, Perfect!"
+            header.text = "Perfect!"
         } else if finalPercent >= 75 {
-            header.text = String(finalPercent) + "%, Almost There!"
+            header.text = "Almost There!"
         } else if finalPercent < 75 && finalPercent >= 50  {
-            header.text = String(finalPercent) + "%, Keep Trying!"
+            header.text = "Keep Trying!"
+        } else if finalPercent < 50 && finalPercent >= 25  {
+            header.text = "Not so hot..."
+        } else {
+            header.text = "Yikes, this is awkward."
         }
         
         //header.text = String(finalPercent) + "%"

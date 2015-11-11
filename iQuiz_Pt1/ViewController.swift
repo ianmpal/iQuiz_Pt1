@@ -70,6 +70,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         //chevron code
         //cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        
+        cell.textLabel!.textColor = UIColor.whiteColor()
+        cell.detailTextLabel?.textColor = UIColor.whiteColor()
+        cell.tintColor = UIColor.whiteColor()
+
+
 
         return cell
     }
