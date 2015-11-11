@@ -74,9 +74,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.textLabel!.textColor = UIColor.whiteColor()
         cell.detailTextLabel?.textColor = UIColor.whiteColor()
         cell.tintColor = UIColor.whiteColor()
-
-
-
         return cell
     }
     

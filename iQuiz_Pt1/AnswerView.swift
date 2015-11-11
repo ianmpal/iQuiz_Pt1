@@ -33,6 +33,7 @@ class AnswerView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.setHidesBackButton(true, animated: false)
         nextButton.layer.borderWidth = 2.0
         nextButton.layer.borderColor = UIColor(white: 1.0, alpha: 100).CGColor
         questionText.text = questions[currentQuestion].0

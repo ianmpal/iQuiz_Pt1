@@ -26,6 +26,7 @@ class FinalViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.setHidesBackButton(true, animated: false)
         finishButton.layer.borderWidth = 2.0
         finishButton.layer.borderColor = UIColor(white: 1.0, alpha: 100).CGColor
         bigPercent.layer.borderWidth = 2.0
@@ -43,7 +44,7 @@ class FinalViewController: UIViewController {
         } else if finalPercent < 50 && finalPercent >= 25  {
             header.text = "Not so hot..."
         } else {
-            header.text = "Yikes, this is awkward."
+            header.text = "Yikes, this is awkward..."
         }
         
         //header.text = String(finalPercent) + "%"
