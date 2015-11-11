@@ -75,14 +75,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
 
-//     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        print("hello")
-//    
-//    }
-//
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        print("hello")
-//    }
 
     
      func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

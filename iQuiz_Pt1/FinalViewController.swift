@@ -27,12 +27,14 @@ class FinalViewController: UIViewController {
         
         if finalPercent == 100.0 {
             header.text = String(finalPercent) + "%, Perfect!"
-        } else if finalPercent > 74 {
-            header.text = String(finalPercent) + "%, Almost there!"
+        } else if finalPercent >= 75 {
+            header.text = String(finalPercent) + "%, Almost There!"
+        } else if finalPercent < 75 && finalPercent >= 50  {
+            header.text = String(finalPercent) + "%, Keep Trying!"
         }
         
         //header.text = String(finalPercent) + "%"
-        scoreLabel.text = "Your Score is: " + String(score) + "/" + String(questions.count)
+        scoreLabel.text = "You got " + String(score) + " of " + String(questions.count) + " correct."
     
 
         // Do any additional setup after loading the view.

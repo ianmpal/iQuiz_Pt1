@@ -15,7 +15,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Row" textLabel="wL0-7d-5P1" detailTextLabel="BUD-tS-iCA" imageView="yUk-zV-hjy" style="IBUITableViewCellStyleSubtitle" id="Zrx-42-c6F">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zrx-42-c6F" id="gbm-fg-rNn">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
@@ -48,7 +48,7 @@
                                 <animations/>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="QOA-J0-dOk">
-                                <rect key="frame" x="0.0" y="72" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QOA-J0-dOk" id="SQL-dy-RsT">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
@@ -58,7 +58,7 @@
                                 <animations/>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="BsY-yx-2eV">
-                                <rect key="frame" x="0.0" y="116" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="180" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BsY-yx-2eV" id="5bg-hP-apQ">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
@@ -68,7 +68,7 @@
                                 <animations/>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="44L-3q-PNC">
-                                <rect key="frame" x="0.0" y="160" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="224" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="44L-3q-PNC" id="co9-Cp-smo">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
@@ -78,7 +78,7 @@
                                 <animations/>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="3gG-Lu-xBG">
-                                <rect key="frame" x="0.0" y="204" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="268" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3gG-Lu-xBG" id="OcO-lX-jtM">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
@@ -125,81 +125,100 @@
                                 <rect key="frame" x="112" y="126" width="376" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPh-Q8-wuU">
-                                <rect key="frame" x="35" y="196" width="530" height="46"/>
+                                <rect key="frame" x="152" y="195" width="296" height="46"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.32369395753705887" green="0.74026505235602102" blue="0.43694945976039634" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Button1">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="answerOnePressed:" destination="RjC-ju-tOA" eventType="touchUpInside" id="SwP-An-vN2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fe8-4k-8Cy">
-                                <rect key="frame" x="35" y="271" width="530" height="46"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.32369395753705887" green="0.74026505235602102" blue="0.43694945976039634" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button2">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="answerTwoPressed:" destination="RjC-ju-tOA" eventType="touchUpInside" id="tFc-zF-wz4"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e86-6u-irT">
-                                <rect key="frame" x="35" y="346" width="530" height="43"/>
+                                <rect key="frame" x="152" y="346" width="296" height="43"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.32369395753705887" green="0.74026505235602102" blue="0.43694945976039634" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Button3">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="answerThreePressed:" destination="RjC-ju-tOA" eventType="touchUpInside" id="qbn-ui-SQA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xu-NA-I8b">
-                                <rect key="frame" x="35" y="413" width="530" height="44"/>
+                                <rect key="frame" x="152" y="413" width="296" height="44"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.32369395753705887" green="0.74026505235602102" blue="0.43694945976039634" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Button4">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="answerFourPressed:" destination="RjC-ju-tOA" eventType="touchUpInside" id="Fgc-9a-LHI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zu7-tx-AgN">
-                                <rect key="frame" x="215" y="494" width="170" height="30"/>
+                                <rect key="frame" x="215" y="494" width="170" height="46"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.74026505235602102" green="0.13939281572170786" blue="0.17674170693477187" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Submit Answer"/>
                                 <state key="disabled" title="Please  an Answer first">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="submitPressed:" destination="RjC-ju-tOA" eventType="touchUpInside" id="IMF-LA-bN3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fe8-4k-8Cy">
+                                <rect key="frame" x="152" y="265" width="296" height="46"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button2">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="answerTwoPressed:" destination="RjC-ju-tOA" eventType="touchUpInside" id="tFc-zF-wz4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.42764077911846321" blue="0.45472585189815318" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="x3B-Hm-gxs" firstAttribute="width" secondItem="J2n-ne-jph" secondAttribute="width" id="Cir-Fe-M3c"/>
                             <constraint firstItem="x3B-Hm-gxs" firstAttribute="centerX" secondItem="J2n-ne-jph" secondAttribute="centerX" id="I5Y-o8-E0m"/>
                             <constraint firstItem="e86-6u-irT" firstAttribute="centerX" secondItem="J2n-ne-jph" secondAttribute="centerX" id="N3y-U9-Le2"/>
-                            <constraint firstItem="e86-6u-irT" firstAttribute="width" secondItem="J2n-ne-jph" secondAttribute="width" id="ZrB-Vm-RtI"/>
                             <constraint firstItem="4xu-NA-I8b" firstAttribute="centerX" secondItem="J2n-ne-jph" secondAttribute="centerX" id="bf9-l2-ewh"/>
                             <constraint firstItem="Zu7-tx-AgN" firstAttribute="centerX" secondItem="J2n-ne-jph" secondAttribute="centerX" id="hjd-IN-FgH"/>
-                            <constraint firstItem="4xu-NA-I8b" firstAttribute="width" secondItem="J2n-ne-jph" secondAttribute="width" id="hsG-98-cIK"/>
-                            <constraint firstItem="qPh-Q8-wuU" firstAttribute="width" secondItem="J2n-ne-jph" secondAttribute="width" id="kre-Rj-zIL"/>
                             <constraint firstItem="qPh-Q8-wuU" firstAttribute="centerX" secondItem="J2n-ne-jph" secondAttribute="centerX" id="o7r-ok-eLO"/>
-                            <constraint firstItem="Zu7-tx-AgN" firstAttribute="width" secondItem="J2n-ne-jph" secondAttribute="width" id="sa2-K7-NhI"/>
-                            <constraint firstItem="fe8-4k-8Cy" firstAttribute="width" secondItem="J2n-ne-jph" secondAttribute="width" id="tnz-OP-0u0"/>
                             <constraint firstItem="fe8-4k-8Cy" firstAttribute="centerX" secondItem="J2n-ne-jph" secondAttribute="centerX" id="xjP-t5-ZAu"/>
                         </constraints>
                     </view>
@@ -232,40 +251,48 @@
                                 <rect key="frame" x="20" y="137" width="560" height="22"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTI-Vz-zB5">
                                 <rect key="frame" x="256" y="218" width="88" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzD-Pd-vHe">
                                 <rect key="frame" x="226" y="304" width="148" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWO-SN-Nfz">
-                                <rect key="frame" x="277" y="397" width="46" height="30"/>
+                                <rect key="frame" x="246" y="397" width="108" height="60"/>
                                 <animations/>
-                                <state key="normal" title="Next"/>
+                                <color key="backgroundColor" red="1" green="0.50044076280000005" blue="0.022280329549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nextPressed:" destination="cCt-fY-vFG" eventType="touchUpInside" id="b6V-yH-RTe"/>
                                 </connections>
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.30467655919999997" green="0.62728725880000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="wzD-Pd-vHe" firstAttribute="centerX" secondItem="oNd-nL-R7h" secondAttribute="centerX" id="8lo-DV-Tbt"/>
                             <constraint firstItem="ZTI-Vz-zB5" firstAttribute="centerX" secondItem="oNd-nL-R7h" secondAttribute="centerX" id="Atl-1g-TJk"/>
                             <constraint firstItem="ZTI-Vz-zB5" firstAttribute="width" secondItem="oNd-nL-R7h" secondAttribute="width" id="E0y-sx-4fV"/>
                             <constraint firstItem="WYx-6e-ZT0" firstAttribute="width" secondItem="oNd-nL-R7h" secondAttribute="width" id="EyU-bG-5Ut"/>
-                            <constraint firstItem="pWO-SN-Nfz" firstAttribute="width" secondItem="oNd-nL-R7h" secondAttribute="width" id="Fut-JO-WGq"/>
                             <constraint firstItem="WYx-6e-ZT0" firstAttribute="centerX" secondItem="oNd-nL-R7h" secondAttribute="centerX" id="Ibf-7O-cEm"/>
                             <constraint firstItem="wzD-Pd-vHe" firstAttribute="width" secondItem="oNd-nL-R7h" secondAttribute="width" id="oqh-dW-bM1"/>
                             <constraint firstItem="pWO-SN-Nfz" firstAttribute="centerX" secondItem="oNd-nL-R7h" secondAttribute="centerX" id="qAB-yV-qRE"/>
@@ -299,13 +326,15 @@
                                 <rect key="frame" x="68" y="316" width="450" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0aJ-6w-aYr">
                                 <rect key="frame" x="280" y="451" width="41" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Finish"/>
+                                <state key="normal" title="Finish">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="finishedPressed:" destination="0Z8-iM-2aQ" eventType="touchUpInside" id="cQb-RW-FNe"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="VRx-q0-eRI"/>
@@ -315,12 +344,12 @@
                                 <rect key="frame" x="26" y="258" width="549" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.035950098436582145" green="1" blue="0.69711208281496284" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="G6V-Ev-zRr" firstAttribute="centerX" secondItem="gwA-lQ-TD2" secondAttribute="centerX" id="0f3-Kq-Q16"/>
                             <constraint firstItem="YGV-1W-Ky5" firstAttribute="width" secondItem="gwA-lQ-TD2" secondAttribute="width" id="5dG-Ii-wdV"/>
@@ -364,6 +393,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="UFA-La-CGl"/>
-        <segue reference="VRx-q0-eRI"/>
+        <segue reference="Yhb-fy-LZ3"/>
     </inferredMetricsTieBreakers>
 </document>

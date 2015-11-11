@@ -22,7 +22,6 @@ class AnswerView: UIViewController {
     @IBOutlet weak var actualAnswer: UILabel!
     
     @IBAction func nextPressed(sender: AnyObject) {
-        print("score at NEXT is: " + String(score))
         if questionsLeft > 0 {
             self.performSegueWithIdentifier("answerToQuiz", sender: nil)
         } else {

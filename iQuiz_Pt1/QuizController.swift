@@ -23,6 +23,9 @@ class QuizController: UIViewController {
     
     @IBOutlet weak var answerOne: UIButton!
     @IBAction func answerOnePressed(sender: AnyObject) {
+        answerTwo.hidden = true
+        answerThree.hidden = true
+        answerFour.hidden = true
         answerSelected = true
         if questions[currentQuestion].1 == correctAnswerText {
             correctAnswer = true
@@ -33,6 +36,9 @@ class QuizController: UIViewController {
     @IBOutlet weak var answerTwo: UIButton!
     @IBAction func answerTwoPressed(sender: AnyObject) {
         answerSelected = true
+        answerOne.hidden = true
+        answerThree.hidden = true
+        answerFour.hidden = true
         if questions[currentQuestion].2 == correctAnswerText {
             correctAnswer = true
             score++
@@ -45,10 +51,12 @@ class QuizController: UIViewController {
     @IBOutlet weak var answerThree: UIButton!
     @IBAction func answerThreePressed(sender: AnyObject) {
         answerSelected = true
+        answerOne.hidden = true
+        answerTwo.hidden = true
+        answerFour.hidden = true
         if questions[currentQuestion].3 == correctAnswerText {
             correctAnswer = true
             score++
-            print("score is: " + String(score))
         }
 
     }
@@ -56,6 +64,9 @@ class QuizController: UIViewController {
     @IBOutlet weak var answerFour: UIButton!
     @IBAction func answerFourPressed(sender: AnyObject) {
         answerSelected = true
+        answerOne.hidden = true
+        answerTwo.hidden = true
+        answerThree.hidden = true
         if questions[currentQuestion].4 == correctAnswerText {
             correctAnswer = true
             score++
@@ -67,7 +78,6 @@ class QuizController: UIViewController {
     
     @IBAction func submitPressed(sender: AnyObject) {
         questionsLeft--
-        print("current question at submt is" + String(currentQuestion))
         checkAnswer()
     }
     
@@ -87,8 +97,6 @@ class QuizController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        print("questions left" + String(questionsLeft))
-//        print("score is: " + String(score))
         correctAnswerText = questions[currentQuestion].5
 
         questionText.text = questions[currentQuestion].0
