@@ -129,6 +129,3 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
 }
-
-// http://stackoverflow.com/questions/28323925/push-segue-from-uitableviewcell-to-viewcontroller-in-swift
-
