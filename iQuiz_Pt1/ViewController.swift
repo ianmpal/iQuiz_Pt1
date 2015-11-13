@@ -96,6 +96,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             if let qController = segue.destinationViewController as? QuizController {
                 qController.questions = mathQuestions
                 qController.questionsLeft = mathQuestions.count
+                qController.quizName = "Mathematics"
             }
         }
         
@@ -103,6 +104,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             if let qController = segue.destinationViewController as? QuizController {
                 qController.questions = heroQuestions
                 qController.questionsLeft = heroQuestions.count
+                qController.quizName = "Super Heroes"
 
             }
         }
@@ -111,6 +113,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             if let qController = segue.destinationViewController as? QuizController {
                 qController.questions = scienceQuestions
                 qController.questionsLeft = scienceQuestions.count
+                qController.quizName = "Science"
 
             }
         }

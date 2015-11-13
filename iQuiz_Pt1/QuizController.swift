@@ -18,6 +18,7 @@ class QuizController: UIViewController {
     var score = 0
     var questionsLeft = 0
     var currentQuestion = 0
+    var quizName = ""
 
     @IBOutlet weak var questionText: UILabel!
     @IBOutlet weak var submitButton: UIButton!
@@ -101,6 +102,8 @@ class QuizController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: false)
+        self.title = quizName
+
         
         submitButton.layer.borderWidth = 2.0
         submitButton.layer.borderColor = UIColor(white: 1.0, alpha: 100).CGColor
@@ -134,7 +137,7 @@ class QuizController: UIViewController {
             aController.questionsLeft = questionsLeft
             aController.score = score
             aController.currentQuestion = currentQuestion
-            
+            aController.quizName = quizName
         }
     }
       

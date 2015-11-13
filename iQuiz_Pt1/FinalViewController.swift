@@ -14,6 +14,7 @@ class FinalViewController: UIViewController {
     var score = 0
     var percent: Double = 0.0
     var finalPercent: Double = 0.0
+    var quizName = ""
 
 
     @IBOutlet weak var scoreLabel: UILabel!
@@ -26,6 +27,7 @@ class FinalViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = quizName
         self.navigationItem.setHidesBackButton(true, animated: false)
         finishButton.layer.borderWidth = 2.0
         finishButton.layer.borderColor = UIColor(white: 1.0, alpha: 100).CGColor
@@ -42,7 +44,7 @@ class FinalViewController: UIViewController {
         } else if finalPercent < 75 && finalPercent >= 50  {
             header.text = "Keep Trying!"
         } else if finalPercent < 50 && finalPercent >= 25  {
-            header.text = "Not so hot..."
+            header.text = "You can do better! Try again."
         } else {
             header.text = "Yikes, this is awkward..."
         }

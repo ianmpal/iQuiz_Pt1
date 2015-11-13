@@ -16,6 +16,7 @@ class AnswerView: UIViewController {
     var score = 0
     var questionsLeft = 0
     var currentQuestion = 0
+    var quizName = ""
 
     @IBOutlet weak var answerText: UILabel!
     @IBOutlet weak var questionText: UILabel!
@@ -33,6 +34,7 @@ class AnswerView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = quizName
         self.navigationItem.setHidesBackButton(true, animated: false)
         nextButton.layer.borderWidth = 2.0
         nextButton.layer.borderColor = UIColor(white: 1.0, alpha: 100).CGColor
@@ -66,12 +68,14 @@ class AnswerView: UIViewController {
                 qController.questionsLeft = questionsLeft
                 qController.currentQuestion = currentQuestion
                 qController.score = score
+                qController.quizName = quizName
             }
         } else {
             
             if let fController = segue.destinationViewController as? FinalViewController {
                 fController.score = score
                 fController.questions = questions
+                fController.quizName = quizName
             }
             
         }
