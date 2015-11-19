@@ -91,32 +91,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
        
      
-//        if selectedTitle == "Mathematics" {
             if let qController = segue.destinationViewController as? QuizController {
                 qController.questions = quizzes[indexOfSelection]["questions"] as! [AnyObject]
                 qController.questionsLeft = quizzes.count
                 qController.quizName = String(quizzes[indexOfSelection]["title"])
             }
-//        }
-        
-//        if selectedTitle == "Marvel Super Heroes" {
-//            if let qController = segue.destinationViewController as? QuizController {
-//                qController.questions = heroQuestions
-//                qController.questionsLeft = heroQuestions.count
-//                qController.quizName = "Super Heroes"
-//
-//            }
-//        }
-//        
-//        if selectedTitle == "Science" {
-//            if let qController = segue.destinationViewController as? QuizController {
-//                qController.questions = scienceQuestions
-//                qController.questionsLeft = scienceQuestions.count
-//                qController.quizName = "Science"
-//
-//            }
-//        }
-        
         
       }
     

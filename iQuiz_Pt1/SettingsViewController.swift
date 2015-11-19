@@ -26,9 +26,7 @@ class SettingsViewController: UIViewController {
         let session = NSURLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
         
         let url = NSURL(string: newURL!)
-        
-        //let url = NSURL(string: "http://tednewardsandbox.site44.com/questions.json")
-        
+                
         let request = NSMutableURLRequest(URL: url!)
         
         request.HTTPMethod = "GET"
@@ -42,7 +40,6 @@ class SettingsViewController: UIViewController {
             do {
                 self.quizzes = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments) as! [AnyObject]
                 
-               // print(self.quizzes)
                 
                 
             } catch {

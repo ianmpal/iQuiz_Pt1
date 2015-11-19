@@ -14,7 +14,7 @@ class QuizController: UIViewController {
     
     var answerSelected = false
     var correctAnswer = false
-    var correctAnswerInt = 0
+    var correctAnswerInt = Int
     var correctAnswerText = ""
     var score = 0
     var questionsLeft = 0
@@ -33,9 +33,9 @@ class QuizController: UIViewController {
         submitButton.layer.borderWidth = 2.0
         submitButton.layer.borderColor = UIColor(white: 1.0, alpha: 100).CGColor
         
-        correctAnswerInt = questions[currentQuestion]["answer"]
+        correctAnswerInt = Int(questions[currentQuestion]["answer"])
         
-        correctAnswerText = questions[currentQuestion]["answers"][correctAnswerInt] as! String
+        correctAnswerText = String(questions[currentQuestion]["answers"][correctAnswerInt])
         
         questionText.text = questions[currentQuestion][0]
         
