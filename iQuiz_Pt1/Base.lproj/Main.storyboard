@@ -17,7 +17,7 @@
                         <color key="sectionIndexColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Row" textLabel="wL0-7d-5P1" detailTextLabel="BUD-tS-iCA" imageView="yUk-zV-hjy" style="IBUITableViewCellStyleSubtitle" id="Zrx-42-c6F">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zrx-42-c6F" id="gbm-fg-rNn">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
@@ -51,7 +51,7 @@
                                 <color key="backgroundColor" red="0.10196078431372549" green="0.67843137254901964" blue="0.6705882352941176" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="QOA-J0-dOk">
-                                <rect key="frame" x="0.0" y="72" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QOA-J0-dOk" id="SQL-dy-RsT">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
@@ -61,7 +61,7 @@
                                 <animations/>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="BsY-yx-2eV">
-                                <rect key="frame" x="0.0" y="116" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="180" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BsY-yx-2eV" id="5bg-hP-apQ">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
@@ -71,7 +71,7 @@
                                 <animations/>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="44L-3q-PNC">
-                                <rect key="frame" x="0.0" y="160" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="224" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="44L-3q-PNC" id="co9-Cp-smo">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
@@ -81,7 +81,7 @@
                                 <animations/>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="3gG-Lu-xBG">
-                                <rect key="frame" x="0.0" y="204" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="268" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3gG-Lu-xBG" id="OcO-lX-jtM">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
@@ -101,6 +101,9 @@
                             <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="settingsPressed:" destination="BYZ-38-t0r" id="gbk-ab-dd3"/>
+                                <segue destination="3U8-3J-tIi" kind="popoverPresentation" identifier="settingsSegue" popoverAnchorBarButtonItem="mHn-F7-QEV" id="74f-un-upx">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -111,6 +114,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1005" y="353"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="7VV-lE-Cpp">
+            <objects>
+                <viewController id="3U8-3J-tIi" customClass="SettingsViewController" customModule="iQuiz_Pt1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="URQ-fQ-lAl"/>
+                        <viewControllerLayoutGuide type="bottom" id="yEO-ts-eT4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gcc-Dc-KhJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RR4-hN-0OO">
+                                <rect key="frame" x="266" y="316" width="69" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Download"/>
+                                <connections>
+                                    <action selector="downloadQuiz:" destination="3U8-3J-tIi" eventType="touchUpInside" id="44C-0Q-TG6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H39-Hg-P9t">
+                                <rect key="frame" x="282" y="389" width="37" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Done"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7R6-Xs-Xur">
+                                <rect key="frame" x="147" y="264" width="307" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RR4-hN-0OO" firstAttribute="centerX" secondItem="gcc-Dc-KhJ" secondAttribute="centerX" id="E0w-wz-hYh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="urlTextField" destination="7R6-Xs-Xur" id="XHY-bz-BeK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UJc-Hd-IIm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="997" y="1191"/>
         </scene>
         <!--Quiz Controller-->
         <scene sceneID="NZm-kV-R2L">
@@ -439,7 +488,7 @@
         <image name="nyan_cat" width="900" height="643"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VRx-q0-eRI"/>
         <segue reference="UFA-La-CGl"/>
+        <segue reference="Yhb-fy-LZ3"/>
     </inferredMetricsTieBreakers>
 </document>
