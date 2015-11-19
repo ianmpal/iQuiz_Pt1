@@ -13,10 +13,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var selectedTitle : String = ""
     
-    var quizzes2 = [AnyObject]()
+    var quizzes = [AnyObject]()
     
     
-    var quizzes = [("Mathematics", "Mathematics Quiz Subheading"), ("Marvel Super Heroes", "Super Heroes Subheading"), ("Science", "Science Subheading")]
+    @IBOutlet var quizTable: UITableView!
+    
+    @IBAction func onButtonPress(sender: AnyObject) {
+        print(quizzes)
+    }
+    
+    var quizzes2 = [("Mathematics", "Mathematics Quiz Subheading"), ("Marvel Super Heroes", "Super Heroes Subheading"), ("Science", "Science Subheading")]
     
     var mathQuestions = [("What is 2*2?", "9", "4", "3", "2", "4"), ("What is 50*3?", "6", "42", "108", "150", "150"), ("How many times does 3 go into 36?", "54", "12", "15", "10", "12"), ("What is the square root of 144?", "12", "11", "10", "9", "12"), ("What is 14%10", "6", "2", "3", "4", "4"), ("What is 2*36?", "67", "76", "75", "72", "72")]
     
@@ -29,6 +35,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.title = "iQuiz"
         // Do any additional setup after loading the view, typically from a nib.
 
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.quizTable.reloadData()
+        //self.tableView.reloadData()
     }
     
     // return how many sections are in table
@@ -59,19 +70,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = tableView.dequeueReusableCellWithIdentifier("Row", forIndexPath: indexPath)
         
         
-        //let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyTestCell")
-        let (quizName, quizSubHeading) = quizzes[indexPath.row]
-        cell.textLabel?.text = quizName
-        cell.detailTextLabel?.text = quizSubHeading
-
+      
+        //let (quizName, quizSubHeading) = quizzes[indexPath.row]
         
-        // Adding an image to "row" under the properties inspector appears to do the same thing as this code
-        // Same with the chevron code
+        let quizName = quizzes[indexPath.row]["title"]!
+        let quizSubHeading = quizzes[indexPath.row]["desc"]!
         
-        //cell.imageView!.image = UIImage(named: "nyan_cat")
-        
-        //chevron code
-        //cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        cell.textLabel?.text = String(quizName!)
+        cell.detailTextLabel?.text = String(quizSubHeading!)
         
         cell.textLabel!.textColor = UIColor.whiteColor()
         cell.detailTextLabel?.textColor = UIColor.whiteColor()

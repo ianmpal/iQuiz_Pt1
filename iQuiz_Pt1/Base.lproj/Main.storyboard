@@ -108,6 +108,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="quizTable" destination="Nlu-af-Ihg" id="Cc8-kM-W1E"/>
                         <segue destination="RjC-ju-tOA" kind="show" identifier="quiz" id="UFA-La-CGl"/>
                     </connections>
                 </viewController>
