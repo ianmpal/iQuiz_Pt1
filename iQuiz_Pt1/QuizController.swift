@@ -10,10 +10,11 @@ import UIKit
 
 class QuizController: UIViewController {
     
-    var questions = [(String, String, String, String, String, String)]()
+    var questions = [AnyObject]()
     
     var answerSelected = false
     var correctAnswer = false
+    var correctAnswerInt = 0
     var correctAnswerText = ""
     var score = 0
     var questionsLeft = 0
@@ -22,6 +23,31 @@ class QuizController: UIViewController {
 
     @IBOutlet weak var questionText: UILabel!
     @IBOutlet weak var submitButton: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationItem.setHidesBackButton(true, animated: false)
+        self.title = quizName
+        
+        
+        submitButton.layer.borderWidth = 2.0
+        submitButton.layer.borderColor = UIColor(white: 1.0, alpha: 100).CGColor
+        
+        correctAnswerInt = questions[currentQuestion]["answer"]
+        
+        correctAnswerText = questions[currentQuestion]["answers"][correctAnswerInt] as! String
+        
+        questionText.text = questions[currentQuestion][0]
+        
+        answerOne.setTitle(questions[currentQuestion].1, forState: .Normal)
+        
+        answerTwo.setTitle(questions[currentQuestion].2, forState: .Normal)
+        
+        answerThree.setTitle(questions[currentQuestion].3, forState: .Normal)
+        
+        answerFour.setTitle(questions[currentQuestion].4, forState: .Normal)
+        
+    }
     
     @IBOutlet weak var answerOne: UIButton!
     @IBAction func answerOnePressed(sender: AnyObject) {
@@ -99,29 +125,7 @@ class QuizController: UIViewController {
     }
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.navigationItem.setHidesBackButton(true, animated: false)
-        self.title = quizName
-
-        
-        submitButton.layer.borderWidth = 2.0
-        submitButton.layer.borderColor = UIColor(white: 1.0, alpha: 100).CGColor
-
-        
-        correctAnswerText = questions[currentQuestion].5
-
-        questionText.text = questions[currentQuestion].0
-
-        answerOne.setTitle(questions[currentQuestion].1, forState: .Normal)
-        
-        answerTwo.setTitle(questions[currentQuestion].2, forState: .Normal)
-        
-        answerThree.setTitle(questions[currentQuestion].3, forState: .Normal)
-        
-        answerFour.setTitle(questions[currentQuestion].4, forState: .Normal)
-        
-    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

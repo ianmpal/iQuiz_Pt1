@@ -15,6 +15,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var quizzes = [AnyObject]()
     
+    var indexOfSelection = 0
+    
     
     @IBOutlet var quizTable: UITableView!
     
@@ -22,13 +24,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         print(quizzes)
     }
     
-    var quizzes2 = [("Mathematics", "Mathematics Quiz Subheading"), ("Marvel Super Heroes", "Super Heroes Subheading"), ("Science", "Science Subheading")]
-    
-    var mathQuestions = [("What is 2*2?", "9", "4", "3", "2", "4"), ("What is 50*3?", "6", "42", "108", "150", "150"), ("How many times does 3 go into 36?", "54", "12", "15", "10", "12"), ("What is the square root of 144?", "12", "11", "10", "9", "12"), ("What is 14%10", "6", "2", "3", "4", "4"), ("What is 2*36?", "67", "76", "75", "72", "72")]
-    
-    var heroQuestions = [("Who shoots webs out of his hands?", "Superman", "Batman", "Spiderman", "Loki", "Spiderman"), ("Who wears a red cape?", "Superman", "Batman", "Spiderman", "Loki", "Superman"), ("Who is Thor's brother?", "Superman", "Batman", "Spiderman", "Loki", "Loki"), ("Who's parents were killed by a robber?", "Batman", "The Joker", "Penguin", "Mr. Freeze", "Batman")]
-    
-    var scienceQuestions = [("What is the English name for the element Hg?", "Mercury", "Plutonium", "Helium", "Oxygen", "Mercury"), ("What does water turn into when it freezes?", "It's still a liquid", "Magma", "Vapor", "Ice", "Ice")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +34,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewWillAppear(animated: Bool) {
         self.quizTable.reloadData()
-        //self.tableView.reloadData()
     }
     
     // return how many sections are in table
@@ -69,10 +63,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Row", forIndexPath: indexPath)
         
-        
-      
-        //let (quizName, quizSubHeading) = quizzes[indexPath.row]
-        
         let quizName = quizzes[indexPath.row]["title"]!
         let quizSubHeading = quizzes[indexPath.row]["desc"]!
         
@@ -89,6 +79,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     
      func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        indexOfSelection = indexPath.row
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         self.selectedTitle = (cell?.textLabel?.text)!
         self.performSegueWithIdentifier("quiz", sender: nil)
@@ -100,31 +91,31 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
        
      
-        if selectedTitle == "Mathematics" {
+//        if selectedTitle == "Mathematics" {
             if let qController = segue.destinationViewController as? QuizController {
-                qController.questions = mathQuestions
-                qController.questionsLeft = mathQuestions.count
-                qController.quizName = "Mathematics"
+                qController.questions = quizzes[indexOfSelection]["questions"] as! [AnyObject]
+                qController.questionsLeft = quizzes.count
+                qController.quizName = String(quizzes[indexOfSelection]["title"])
             }
-        }
+//        }
         
-        if selectedTitle == "Marvel Super Heroes" {
-            if let qController = segue.destinationViewController as? QuizController {
-                qController.questions = heroQuestions
-                qController.questionsLeft = heroQuestions.count
-                qController.quizName = "Super Heroes"
-
-            }
-        }
-        
-        if selectedTitle == "Science" {
-            if let qController = segue.destinationViewController as? QuizController {
-                qController.questions = scienceQuestions
-                qController.questionsLeft = scienceQuestions.count
-                qController.quizName = "Science"
-
-            }
-        }
+//        if selectedTitle == "Marvel Super Heroes" {
+//            if let qController = segue.destinationViewController as? QuizController {
+//                qController.questions = heroQuestions
+//                qController.questionsLeft = heroQuestions.count
+//                qController.quizName = "Super Heroes"
+//
+//            }
+//        }
+//        
+//        if selectedTitle == "Science" {
+//            if let qController = segue.destinationViewController as? QuizController {
+//                qController.questions = scienceQuestions
+//                qController.questionsLeft = scienceQuestions.count
+//                qController.quizName = "Science"
+//
+//            }
+//        }
         
         
       }
@@ -135,3 +126,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
 }
+
+
+/* Mock Data
+
+
+var quizzes2 = [("Mathematics", "Mathematics Quiz Subheading"), ("Marvel Super Heroes", "Super Heroes Subheading"), ("Science", "Science Subheading")]
+
+var mathQuestions = [("What is 2*2?", "9", "4", "3", "2", "4"), ("What is 50*3?", "6", "42", "108", "150", "150"), ("How many times does 3 go into 36?", "54", "12", "15", "10", "12"), ("What is the square root of 144?", "12", "11", "10", "9", "12"), ("What is 14%10", "6", "2", "3", "4", "4"), ("What is 2*36?", "67", "76", "75", "72", "72")]
+
+var heroQuestions = [("Who shoots webs out of his hands?", "Superman", "Batman", "Spiderman", "Loki", "Spiderman"), ("Who wears a red cape?", "Superman", "Batman", "Spiderman", "Loki", "Superman"), ("Who is Thor's brother?", "Superman", "Batman", "Spiderman", "Loki", "Loki"), ("Who's parents were killed by a robber?", "Batman", "The Joker", "Penguin", "Mr. Freeze", "Batman")]
+
+var scienceQuestions = [("What is the English name for the element Hg?", "Mercury", "Plutonium", "Helium", "Oxygen", "Mercury"), ("What does water turn into when it freezes?", "It's still a liquid", "Magma", "Vapor", "Ice", "Ice")]
+
+*/
