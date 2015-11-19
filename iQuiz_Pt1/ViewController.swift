@@ -13,6 +13,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var selectedTitle : String = ""
     
+    var quizzes2 = [AnyObject]()
+    
     
     var quizzes = [("Mathematics", "Mathematics Quiz Subheading"), ("Marvel Super Heroes", "Super Heroes Subheading"), ("Science", "Science Subheading")]
     
@@ -121,11 +123,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
       }
     
- 
-    
-    
-    
-    
+    @IBAction func exit(segue: UIStoryboardSegue) {
+        print("moved back")
+    }
     
     
 }

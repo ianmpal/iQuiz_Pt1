@@ -9,26 +9,30 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    
+    var quizzes = [AnyObject]()
 
+    @IBAction func unwindSegue(sender: AnyObject) {
+    }
     
     @IBOutlet weak var urlTextField: UITextField!
     
     @IBAction func downloadQuiz(sender: AnyObject) {
         
-        //let didFinishExpectation = expectationWithDescription("download Finished")
-        
+        let newURL = self.urlTextField.text
         
         let sessionConfig = NSURLSessionConfiguration.defaultSessionConfiguration()
         
         let session = NSURLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
         
-        let url = NSURL(string: "http://tednewardsandbox.site44.com/questions.json")
+        let url = NSURL(string: newURL!)
+        
+        //let url = NSURL(string: "http://tednewardsandbox.site44.com/questions.json")
         
         let request = NSMutableURLRequest(URL: url!)
         
         request.HTTPMethod = "GET"
         
-        var quizzes = [AnyObject]()
         
         let task = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
             
@@ -36,17 +40,17 @@ class SettingsViewController: UIViewController {
             print("URL Task Worked: \(statusCode)")
             
             do {
-                quizzes = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments) as! [AnyObject]
+                self.quizzes = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments) as! [AnyObject]
                 
-                //didFinishExpectation.fulfill
+               // print(self.quizzes)
+                
                 
             } catch {
-                //report error if it doesn't work
+                let alertController = UIAlertController(title: "BAD URL", message:
+                    "", preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler: nil))
+                self.presentViewController(alertController, animated: true, completion: nil)
             }
-            
-            
-            
-            
         }
         
         task.resume()
@@ -54,10 +58,19 @@ class SettingsViewController: UIViewController {
         
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if let vController = segue.destinationViewController as? ViewController {
+            vController.quizzes2 = quizzes
+        }
+    }
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.urlTextField.text = "http://tednewardsandbox.site44.com/questions.json"
+
 
         // Do any additional setup after loading the view.
     }
@@ -66,20 +79,6 @@ class SettingsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        <#code#>
-//    }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

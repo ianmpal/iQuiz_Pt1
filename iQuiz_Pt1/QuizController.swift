@@ -140,8 +140,8 @@ class QuizController: UIViewController {
             aController.quizName = quizName
         }
     }
-      
-        
+    
+            
         
 }
     
