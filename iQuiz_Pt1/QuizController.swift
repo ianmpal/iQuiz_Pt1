@@ -22,6 +22,7 @@ class QuizController: UIViewController {
     var questionsLeft = 0
     var currentQuestion = 0
     var quizName = ""
+    var questionTextString = ""
 
     @IBOutlet weak var questionText: UILabel!
     @IBOutlet weak var submitButton: UIButton!
@@ -35,12 +36,14 @@ class QuizController: UIViewController {
         submitButton.layer.borderWidth = 2.0
         submitButton.layer.borderColor = UIColor(white: 1.0, alpha: 100).CGColor
         
+        print("")
+        print(questions[currentQuestion])
+        
         correctAnswerText = questions[currentQuestion][5]
-        questionText.text = questions[currentQuestion][0]
+        questionTextString = questions[currentQuestion][0]
+        questionText.text = questionTextString
         
 //        correctAnswerInt = questions[currentQuestion]["answer"]
-//        
-        
        // correctAnswerInt = (questions[currentQuestion]["answer"])!).integerValue
         
                
@@ -105,7 +108,7 @@ class QuizController: UIViewController {
         answerOne.hidden = true
         answerTwo.hidden = true
         answerFour.hidden = true
-        if questions[currentQuestion].3 == correctAnswerText {
+        if questions[currentQuestion][3] == correctAnswerText {
             correctAnswer = true
             score++
         }
@@ -118,10 +121,10 @@ class QuizController: UIViewController {
         answerOne.hidden = true
         answerTwo.hidden = true
         answerThree.hidden = true
-//        if questions[currentQuestion].4 == correctAnswerText {
-//            correctAnswer = true
-//            score++
-//        }
+        if questions[currentQuestion][4] == correctAnswerText {
+            correctAnswer = true
+            score++
+        }
 
     }
     
@@ -143,7 +146,7 @@ class QuizController: UIViewController {
             alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler: nil))
             self.presentViewController(alertController, animated: true, completion: nil)
         }
-        
+
         self.performSegueWithIdentifier("answer", sender: nil)
     }
     
@@ -158,13 +161,14 @@ class QuizController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if let aController = segue.destinationViewController as? AnswerView {
-            //aController.questions = questions
+            aController.questions = questions
             aController.correctAnswer = correctAnswer
             aController.correctAnswerText = correctAnswerText
             aController.questionsLeft = questionsLeft
             aController.score = score
             aController.currentQuestion = currentQuestion
             aController.quizName = quizName
+            aController.questionTextString = questionTextString
         }
     }
     

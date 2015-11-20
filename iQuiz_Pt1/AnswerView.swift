@@ -17,6 +17,7 @@ class AnswerView: UIViewController {
     var questionsLeft = 0
     var currentQuestion = 0
     var quizName = ""
+    var questionTextString = ""
 
     @IBOutlet weak var answerText: UILabel!
     @IBOutlet weak var questionText: UILabel!
@@ -38,7 +39,7 @@ class AnswerView: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated: false)
         nextButton.layer.borderWidth = 2.0
         nextButton.layer.borderColor = UIColor(white: 1.0, alpha: 100).CGColor
-        //questionText.text = questions[currentQuestion].0
+        questionText.text = questionTextString
         
         if correctAnswer {
             answerText.text = "You got it right! The correct answer is: "
@@ -63,7 +64,7 @@ class AnswerView: UIViewController {
         
             if let qController = segue.destinationViewController as? QuizController {
                 qController.questions = questions
-                //qController.correctAnswer = correctAnswer
+                qController.correctAnswer = correctAnswer
                 qController.correctAnswerText = correctAnswerText
                 qController.questionsLeft = questionsLeft
                 qController.currentQuestion = currentQuestion
@@ -74,7 +75,7 @@ class AnswerView: UIViewController {
             
             if let fController = segue.destinationViewController as? FinalViewController {
                 fController.score = score
-                //fController.questions = questions
+                fController.questions = questions
                 fController.quizName = quizName
             }
             

@@ -10,7 +10,7 @@ import UIKit
 
 class FinalViewController: UIViewController {
     
-    var questions = [(String, String, String, String, String, String)]()
+    var questions = [Array<String>()]
     var score = 0
     var percent: Double = 0.0
     var finalPercent: Double = 0.0
