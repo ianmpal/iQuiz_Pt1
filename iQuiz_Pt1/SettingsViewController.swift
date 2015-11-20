@@ -10,8 +10,8 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    var quizzes = [AnyObject]()
-
+    var quizzes = [NSDictionary]()
+    
     @IBAction func unwindSegue(sender: AnyObject) {
     }
     
@@ -38,7 +38,7 @@ class SettingsViewController: UIViewController {
             print("URL Task Worked: \(statusCode)")
             
             do {
-                self.quizzes = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments) as! [AnyObject]
+                self.quizzes = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments) as! [NSDictionary]
                 
                 
                 
@@ -58,11 +58,13 @@ class SettingsViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
+        print(quizzes)
+        
+        
         if let vController = segue.destinationViewController as? ViewController {
             vController.quizzes = quizzes
         }
         
-        print(quizzes[0]["title"])
 
     }
     

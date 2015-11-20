@@ -10,11 +10,11 @@ import UIKit
 
 class QuizController: UIViewController {
     
-    var questions = [AnyObject]()
+    var questions = [NSDictionary]()
     
     var answerSelected = false
     var correctAnswer = false
-    var correctAnswerInt = Int
+    var correctAnswerInt = 0
     var correctAnswerText = ""
     var score = 0
     var questionsLeft = 0
@@ -28,24 +28,26 @@ class QuizController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: false)
         self.title = quizName
+        print("HIT THIS PONT")
+        print(questions)
         
         
         submitButton.layer.borderWidth = 2.0
         submitButton.layer.borderColor = UIColor(white: 1.0, alpha: 100).CGColor
         
-        correctAnswerInt = Int(questions[currentQuestion]["answer"])
-        
-        correctAnswerText = String(questions[currentQuestion]["answers"][correctAnswerInt])
-        
-        questionText.text = questions[currentQuestion][0]
-        
-        answerOne.setTitle(questions[currentQuestion].1, forState: .Normal)
-        
-        answerTwo.setTitle(questions[currentQuestion].2, forState: .Normal)
-        
-        answerThree.setTitle(questions[currentQuestion].3, forState: .Normal)
-        
-        answerFour.setTitle(questions[currentQuestion].4, forState: .Normal)
+//        correctAnswerInt = Int(questions[currentQuestion]["answer"])
+//        
+//        correctAnswerText = String(questions[currentQuestion]["answers"][correctAnswerInt])
+//        
+//        questionText.text = questions[currentQuestion][0]
+//        
+//        answerOne.setTitle(questions[currentQuestion].1, forState: .Normal)
+//        
+//        answerTwo.setTitle(questions[currentQuestion].2, forState: .Normal)
+//        
+//        answerThree.setTitle(questions[currentQuestion].3, forState: .Normal)
+//        
+//        answerFour.setTitle(questions[currentQuestion].4, forState: .Normal)
         
     }
     
@@ -55,10 +57,10 @@ class QuizController: UIViewController {
         answerThree.hidden = true
         answerFour.hidden = true
         answerSelected = true
-        if questions[currentQuestion].1 == correctAnswerText {
-            correctAnswer = true
-            score++
-        }
+//        if questions[currentQuestion].1 == correctAnswerText {
+//            correctAnswer = true
+//            score++
+//        }
     }
     
     @IBOutlet weak var answerTwo: UIButton!
@@ -67,11 +69,11 @@ class QuizController: UIViewController {
         answerOne.hidden = true
         answerThree.hidden = true
         answerFour.hidden = true
-        if questions[currentQuestion].2 == correctAnswerText {
-            correctAnswer = true
-            score++
-
-        }
+//        if questions[currentQuestion].2 == correctAnswerText {
+//            correctAnswer = true
+//            score++
+//
+//        }
        
     }
     
@@ -82,10 +84,10 @@ class QuizController: UIViewController {
         answerOne.hidden = true
         answerTwo.hidden = true
         answerFour.hidden = true
-        if questions[currentQuestion].3 == correctAnswerText {
-            correctAnswer = true
-            score++
-        }
+//        if questions[currentQuestion].3 == correctAnswerText {
+//            correctAnswer = true
+//            score++
+//        }
 
     }
 
@@ -95,10 +97,10 @@ class QuizController: UIViewController {
         answerOne.hidden = true
         answerTwo.hidden = true
         answerThree.hidden = true
-        if questions[currentQuestion].4 == correctAnswerText {
-            correctAnswer = true
-            score++
-        }
+//        if questions[currentQuestion].4 == correctAnswerText {
+//            correctAnswer = true
+//            score++
+//        }
 
     }
     
@@ -135,7 +137,7 @@ class QuizController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if let aController = segue.destinationViewController as? AnswerView {
-            aController.questions = questions
+            //aController.questions = questions
             aController.correctAnswer = correctAnswer
             aController.correctAnswerText = correctAnswerText
             aController.questionsLeft = questionsLeft

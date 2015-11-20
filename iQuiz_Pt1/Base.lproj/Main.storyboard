@@ -167,7 +167,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJc-Hd-IIm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="2oC-h2-aKx" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1005" y="1035"/>
+            <point key="canvasLocation" x="1005" y="1153"/>
         </scene>
         <!--Quiz Controller-->
         <scene sceneID="NZm-kV-R2L">

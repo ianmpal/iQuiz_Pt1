@@ -13,7 +13,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var selectedTitle : String = ""
     
-    var quizzes = [AnyObject]()
+    var quizzes = [NSDictionary]()
     
     var indexOfSelection = 0
     
@@ -66,8 +66,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let quizName = quizzes[indexPath.row]["title"]!
         let quizSubHeading = quizzes[indexPath.row]["desc"]!
         
-        cell.textLabel?.text = String(quizName!)
-        cell.detailTextLabel?.text = String(quizSubHeading!)
+        cell.textLabel?.text = String(quizName)
+        cell.detailTextLabel?.text = String(quizSubHeading)
         
         cell.textLabel!.textColor = UIColor.whiteColor()
         cell.detailTextLabel?.textColor = UIColor.whiteColor()
@@ -92,7 +92,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
        
      
             if let qController = segue.destinationViewController as? QuizController {
-                qController.questions = quizzes[indexOfSelection]["questions"] as! [AnyObject]
+                qController.questions = quizzes[indexOfSelection]["questions"] as! [NSDictionary]
                 qController.questionsLeft = quizzes.count
                 qController.quizName = String(quizzes[indexOfSelection]["title"])
             }
