@@ -15,6 +15,8 @@ class FinalViewController: UIViewController {
     var percent: Double = 0.0
     var finalPercent: Double = 0.0
     var quizName = ""
+    var quizzesAll = [NSDictionary]()
+
 
 
     @IBOutlet weak var scoreLabel: UILabel!
@@ -62,14 +64,17 @@ class FinalViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if let vController = segue.destinationViewController as? ViewController {
+            
+            vController.quizzesAll = quizzesAll
+            
+        }
+        
     }
-    */
+
 
 }

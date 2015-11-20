@@ -13,7 +13,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var selectedTitle : String = ""
     
-    var quizzes = [NSDictionary]()
+    var quizzesAll = [NSDictionary]()
     var questionsSubset = [NSDictionary]()
     var questions = [Array<String>()]
 
@@ -23,13 +23,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet var quizTable: UITableView!
     
     @IBAction func onButtonPress(sender: AnyObject) {
-        print(quizzes)
+        print(quizzesAll)
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "iQuiz"
+        self.navigationItem.setHidesBackButton(true, animated: false)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -44,7 +45,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // return int how many rows
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return quizzes.count
+        return quizzesAll.count
     }
     
     
@@ -63,8 +64,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Row", forIndexPath: indexPath)
         
-        let quizName = quizzes[indexPath.row]["title"]!
-        let quizSubHeading = quizzes[indexPath.row]["desc"]!
+        let quizName = quizzesAll[indexPath.row]["title"]!
+        let quizSubHeading = quizzesAll[indexPath.row]["desc"]!
         
         cell.textLabel?.text = String(quizName)
         cell.detailTextLabel?.text = String(quizSubHeading)
@@ -84,7 +85,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         self.selectedTitle = (cell?.textLabel?.text)!
         
-        questionsSubset = (quizzes[indexPath.row]["questions"] as? [NSDictionary])!
+        questionsSubset = (quizzesAll[indexPath.row]["questions"] as? [NSDictionary])!
         
         questions.removeAll()
         
@@ -126,20 +127,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        
-//        questions = quizzes[indexOfSelection]["questions"] as! [NSDictionary]
-//        
-//        print(questions)
+
        
      
             if let qController = segue.destinationViewController as? QuizController {
                 
-                //qController.questions = (quizzes[indexOfSelection]["questions"] as? [NSDictionary])!
                 qController.questions = questions
                 qController.questionsLeft = questions.count
-                print("questions.count")
-                print(questions.count)
-                qController.quizName = String(quizzes[indexOfSelection]["title"]!)
+                qController.quizName = String(quizzesAll[indexOfSelection]["title"]!)
+                qController.quizzesAll = quizzesAll
             }
         
       }

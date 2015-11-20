@@ -16,13 +16,14 @@ class QuizController: UIViewController {
     
     var answerSelected = false
     var correctAnswer = false
-    var correctAnswerInt = 0
     var correctAnswerText = ""
     var score = 0
     var questionsLeft = 0
     var currentQuestion = 0
     var quizName = ""
     var questionTextString = ""
+    var quizzesAll = [NSDictionary]()
+
 
     @IBOutlet weak var questionText: UILabel!
     @IBOutlet weak var submitButton: UIButton!
@@ -31,6 +32,8 @@ class QuizController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: false)
         self.title = quizName
+        print(quizzesAll)
+
         
         
         submitButton.layer.borderWidth = 2.0
@@ -43,34 +46,9 @@ class QuizController: UIViewController {
         questionTextString = questions[currentQuestion][0]
         questionText.text = questionTextString
         
-//        correctAnswerInt = questions[currentQuestion]["answer"]
-       // correctAnswerInt = (questions[currentQuestion]["answer"])!).integerValue
-        
-               
-
-        
-        //correctAnswerText = answersDict[0 as AnyObject]
-        
-        //correctAnswerInt = Int(questions[currentQuestion]["answer"] as! String)!
-
-        //correctAnswerText = String(questions[currentQuestion]["answers"][0])
-
-        
-        //correctAnswerText = String(questions[currentQuestion]["answers"]!.correctAnswerInt)
-        
-        
-        //questionText.text = questions[currentQuestion]["text"] as? String
-        
-//        print("qustion text: " + questionText.text!)
-//        print("answer text: " + correctAnswerText)
-//        print("correctAnswerInt: " + String(correctAnswerInt))
-        
         answerOne.setTitle(questions[currentQuestion][1], forState: .Normal)
-        
         answerTwo.setTitle(questions[currentQuestion][2], forState: .Normal)
-        
         answerThree.setTitle(questions[currentQuestion][3], forState: .Normal)
-        
         answerFour.setTitle(questions[currentQuestion][4], forState: .Normal)
         
     }
@@ -169,6 +147,7 @@ class QuizController: UIViewController {
             aController.currentQuestion = currentQuestion
             aController.quizName = quizName
             aController.questionTextString = questionTextString
+            aController.quizzesAll = quizzesAll
         }
     }
     

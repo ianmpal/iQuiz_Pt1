@@ -18,6 +18,8 @@ class AnswerView: UIViewController {
     var currentQuestion = 0
     var quizName = ""
     var questionTextString = ""
+    var quizzesAll = [NSDictionary]()
+
 
     @IBOutlet weak var answerText: UILabel!
     @IBOutlet weak var questionText: UILabel!
@@ -70,6 +72,7 @@ class AnswerView: UIViewController {
                 qController.currentQuestion = currentQuestion
                 qController.score = score
                 qController.quizName = quizName
+                qController.quizzesAll = quizzesAll
             }
         } else {
             
@@ -77,6 +80,7 @@ class AnswerView: UIViewController {
                 fController.score = score
                 fController.questions = questions
                 fController.quizName = quizName
+                fController.quizzesAll = quizzesAll
             }
             
         }
