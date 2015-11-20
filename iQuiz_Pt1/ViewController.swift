@@ -14,7 +14,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var selectedTitle : String = ""
     
     var quizzes = [NSDictionary]()
+    var questions = [NSDictionary]()
+
     
+    var realQuizzes = [String: [String]]()
     var indexOfSelection = 0
     
     
@@ -89,6 +92,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        questions = quizzes[indexOfSelection]["questions"] as! [NSDictionary]
+        
+        print(questions)
        
      
             if let qController = segue.destinationViewController as? QuizController {

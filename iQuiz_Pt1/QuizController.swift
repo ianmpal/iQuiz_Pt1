@@ -10,7 +10,7 @@ import UIKit
 
 class QuizController: UIViewController {
     
-    var questions = [NSDictionary]()
+    var questions = [AnyObject]()
     
     var answerSelected = false
     var correctAnswer = false
@@ -35,19 +35,21 @@ class QuizController: UIViewController {
         submitButton.layer.borderWidth = 2.0
         submitButton.layer.borderColor = UIColor(white: 1.0, alpha: 100).CGColor
         
-//        correctAnswerInt = Int(questions[currentQuestion]["answer"])
-//        
-//        correctAnswerText = String(questions[currentQuestion]["answers"][correctAnswerInt])
-//        
-//        questionText.text = questions[currentQuestion][0]
-//        
-//        answerOne.setTitle(questions[currentQuestion].1, forState: .Normal)
-//        
-//        answerTwo.setTitle(questions[currentQuestion].2, forState: .Normal)
-//        
-//        answerThree.setTitle(questions[currentQuestion].3, forState: .Normal)
-//        
-//        answerFour.setTitle(questions[currentQuestion].4, forState: .Normal)
+        correctAnswerInt = questions[currentQuestion]["answer"] as! Int
+        
+        print(correctAnswerInt)
+        
+        correctAnswerText = String(questions[currentQuestion]["answers"]!!.correctAnswerInt)
+        
+        questionText.text = questions[currentQuestion]["text"] as? String
+        
+        answerOne.setTitle(questions[currentQuestion].1, forState: .Normal)
+        
+        answerTwo.setTitle(questions[currentQuestion].2, forState: .Normal)
+        
+        answerThree.setTitle(questions[currentQuestion].3, forState: .Normal)
+        
+        answerFour.setTitle(questions[currentQuestion].4, forState: .Normal)
         
     }
     
