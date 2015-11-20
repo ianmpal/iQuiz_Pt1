@@ -14,10 +14,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var selectedTitle : String = ""
     
     var quizzes = [NSDictionary]()
-    var questions = [NSDictionary]()
+    var questionsSubset = [NSDictionary]()
+    var questions = [Array<String>()]
 
-    
-    var realQuizzes = [String: [String]]()
     var indexOfSelection = 0
     
     
@@ -31,8 +30,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "iQuiz"
-        // Do any additional setup after loading the view, typically from a nib.
-
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -82,9 +79,46 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     
      func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
         indexOfSelection = indexPath.row
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         self.selectedTitle = (cell?.textLabel?.text)!
+        
+        questionsSubset = (quizzes[indexPath.row]["questions"] as? [NSDictionary])!
+        
+        questions.removeAll()
+        
+        
+        for var i = 0; i < questionsSubset.count; i++ {
+            print("In for loop")
+            var currentQuestion = Array<String>()
+            
+            let curQ = (questionsSubset[i]["text"])!
+            let curChoices = (questionsSubset[i]["answers"])!
+            
+            currentQuestion.append(curQ as! String)
+            
+            for var j = 0; j < curChoices.count; j++ {
+                currentQuestion.append(curChoices[j] as! String)
+            }
+            
+            let answerIndex = ((questionsSubset[i]["answer"])!).integerValue
+            let answer1 = (curChoices[answerIndex - 1])!
+            
+            currentQuestion.append(answer1 as! String)
+            
+            questions.append(currentQuestion)
+            
+            
+            
+        }
+
+        
+        
+        print("questions is")
+        print(questions)
+        
+        
         self.performSegueWithIdentifier("quiz", sender: nil)
         
     }
@@ -92,16 +126,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        questions = quizzes[indexOfSelection]["questions"] as! [NSDictionary]
-        
-        print(questions)
+//        
+//        questions = quizzes[indexOfSelection]["questions"] as! [NSDictionary]
+//        
+//        print(questions)
        
      
             if let qController = segue.destinationViewController as? QuizController {
-                qController.questions = quizzes[indexOfSelection]["questions"] as! [NSDictionary]
-                qController.questionsLeft = quizzes.count
-                qController.quizName = String(quizzes[indexOfSelection]["title"])
+                
+                //qController.questions = (quizzes[indexOfSelection]["questions"] as? [NSDictionary])!
+                qController.questions = questions
+                qController.questionsLeft = questions.count
+                print("questions.count")
+                print(questions.count)
+                qController.quizName = String(quizzes[indexOfSelection]["title"]!)
             }
         
       }

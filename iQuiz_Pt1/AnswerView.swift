@@ -10,7 +10,7 @@ import UIKit
 
 class AnswerView: UIViewController {
     
-    var questions = [NSDictionary]()
+    var questions = [Array<String>()]
     var correctAnswer = false
     var correctAnswerText = ""
     var score = 0

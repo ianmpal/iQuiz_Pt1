@@ -58,7 +58,7 @@ class SettingsViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        print(quizzes)
+        //print(quizzes)
         
         
         if let vController = segue.destinationViewController as? ViewController {
